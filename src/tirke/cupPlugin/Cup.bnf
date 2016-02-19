@@ -1,0 +1,122 @@
+{
+    parserClass = "tirke.cupPlugin.parser.CupParser"
+    extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+    psiClassPrefix = "Cup"
+    psiImplClassSuffix = "Impl"
+    psiPackage = "tirke.cupPlugin.psi"
+    psiImplPackage = "tirke.cupPlugin.psi.impl"
+
+
+    elementTypeHolderClass = "tirke.cupPlugin.psi.CupTypes"
+    elementTypeClass = "tirke.cupPlugin.psi.CupElementType"
+    tokenTypeClass = "tirke.cupPlugin.psi.CupTokenType"
+
+
+
+    tokens = [
+
+    //Punctuation
+    BAR = "|"
+    CCEQ = "::="
+    COLON = ":"
+    COMMA = ","
+    DOT = "."
+    SEMI = ";"
+    STAR = "*"
+
+    // Java keywords
+    CLASS = "class"
+    IMPORT = "import"
+    PACKAGE = "package"
+    STATIC = "static"
+
+    // Cup keywords
+    ACTION = "action"
+    CODE = "code"
+    INIT = "init"
+    PARSER = "parser"
+    SCAN = "scan"
+    START = "start"
+    WITH = "with"
+
+    // Cup symbols keywords
+    NON = "non"
+    NONTERMINAL = "nonterminal"
+    TERMINAL = "terminal"
+
+    // Cup precedence keywords
+    LEFT = "left"
+    NONASSOC = "nonassoc"
+    PERCENT_PREC = "%prec"
+    PRECED = "precedence"
+    RIGHT = "right"
+
+    // Regex
+    identifier = "regexp:\w+"
+    comment="regexp:/\*(.|\n)*\*/"
+
+    ]
+
+}
+
+
+cupSpec             ::=  packageDeclaration? importDeclaration* className? codeParts symbols+
+                         precedences* startWith? production+
+
+
+packageDeclaration  ::= PACKAGE qualifiedName SEMI {pin = 2}
+
+
+importDeclaration   ::= IMPORT STATIC? qualifiedName (DOT STAR)? SEMI
+
+className           ::= CLASS identifier SEMI
+
+
+codeParts           ::= actionCode? parserCode? initCode? scanCode?
+
+
+actionCode          ::= ACTION CODE JAVA_CODE SEMI?
+
+parserCode          ::= PARSER CODE JAVA_CODE SEMI?
+
+initCode            ::= INIT WITH JAVA_CODE SEMI?
+
+scanCode            ::= SCAN WITH JAVA_CODE SEMI?
+
+/*terminalDefinition  ::= TERMINAL typeId? termNameList
+
+nonTerminalDefinition   ::= ( NON TERMINAL | NONTERMINAL) typeId? termNameList*/
+
+symbols             ::= (TERMINAL | NONTERMINAL | NON TERMINAL) typeId termNameList
+                    |   (TERMINAL | NONTERMINAL | NON TERMINAL)  termNameList
+
+precedences         ::= PRECED (LEFT | RIGHT | NONASSOC) termNameList
+
+startWith           ::= START WITH identifier SEMI
+
+production          ::= rule_id CCEQ rhs_list SEMI
+
+rhs_list            ::= rhs (BAR rhs)*
+
+rhs                 ::= prod_part_list PERCENT_PREC term_id
+                    |   prod_part_list
+
+
+prod_part_list      ::= prod_part*
+
+prod_part           ::= symbol_id opt_label?
+                    |   JAVA_CODE
+
+opt_label           ::= COLON label_id
+
+typeId              ::= qualifiedName
+
+termNameList        ::= identifier (COMMA identifier)* SEMI
+
+rule_id             ::= identifier
+symbol_id           ::= identifier
+term_id             ::= identifier
+label_id            ::= identifier
+qualifiedName       ::= identifier (DOT identifier)*
+

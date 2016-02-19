@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+    <id>tirke.cupPlugin</id>
+    <name>Cup Support</name>
+    <version>0.1</version>
+    <vendor email="tschersach@gmail.com" url="">SCHERSACH Thomas</vendor>
+
+    <description><![CDATA[
+      Java CUP file support
+    ]]></description>
+
+    <change-notes>
+        <![CDATA[
+    <b>0.1</b>
+    <ul>
+      <li>Syntax Highlighting</li>
+    </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileTypeFactory implementation="tirke.cupPlugin.CupFileTypeFactory"/>
+        <lang.parserDefinition
+                language="Cup"
+                implementationClass="tirke.cupPlugin.CupParserDefinition"/>
+        <lang.syntaxHighlighterFactory
+                language="Cup"
+                implementationClass="tirke.cupPlugin.highlighing.CupSyntaxHighlighterFactory"/>
+        <annotator language="Cup" implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
+        <colorSettingsPage implementation="tirke.cupPlugin.highlighing.CupColorSettingsPage"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>

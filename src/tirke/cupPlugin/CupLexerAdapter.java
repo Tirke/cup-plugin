@@ -1,0 +1,16 @@
+package tirke.cupPlugin;
+
+import com.intellij.lexer.FlexAdapter;
+
+import java.io.Reader;
+
+/**
+ * Created by Tirke on 18/02/2016
+ */
+public class CupLexerAdapter extends FlexAdapter {
+
+
+    public CupLexerAdapter() {
+        super(new CupLexer((Reader) null));
+    }
+}
