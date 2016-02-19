@@ -2,7 +2,7 @@
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
     <version>0.1</version>
-    <vendor email="tschersach@gmail.com" url="">SCHERSACH Thomas</vendor>
+    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke/cup-plugin">SCHERSACH Thomas</vendor>
 
     <description><![CDATA[
       Java CUP file support
