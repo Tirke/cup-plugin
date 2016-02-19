@@ -1,4 +1,4 @@
-package tirke.cupPlugin.highlighing;
+package tirke.cupPlugin.highlighting;
 
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
@@ -13,7 +13,7 @@ import tirke.cupPlugin.icons.CupIcons;
 import javax.swing.*;
 import java.util.Map;
 
-import static tirke.cupPlugin.highlighing.CupSyntaxHighlighter.*;
+import static tirke.cupPlugin.highlighting.CupSyntaxHighlighter.*;
 
 /**
  * Created by Tirke on 19/02/2016

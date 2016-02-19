@@ -1,4 +1,4 @@
-package tirke.cupPlugin.highlighing;
+package tirke.cupPlugin.highlighting;
 
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;

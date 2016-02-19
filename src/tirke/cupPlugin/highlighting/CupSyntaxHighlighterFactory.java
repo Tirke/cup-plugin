@@ -1,4 +1,4 @@
-package tirke.cupPlugin.highlighing;
+package tirke.cupPlugin.highlighting;
 
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterFactory;

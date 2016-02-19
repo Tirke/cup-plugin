@@ -4,7 +4,7 @@ import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
-import tirke.cupPlugin.highlighing.CupSyntaxHighlighter;
+import tirke.cupPlugin.highlighting.CupSyntaxHighlighter;
 import tirke.cupPlugin.psi.CupLabelId;
 import tirke.cupPlugin.psi.CupRuleId;
 

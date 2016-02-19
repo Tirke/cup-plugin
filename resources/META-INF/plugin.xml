@@ -34,9 +34,9 @@
                 implementationClass="tirke.cupPlugin.CupParserDefinition"/>
         <lang.syntaxHighlighterFactory
                 language="Cup"
-                implementationClass="tirke.cupPlugin.highlighing.CupSyntaxHighlighterFactory"/>
+                implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
         <annotator language="Cup" implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
-        <colorSettingsPage implementation="tirke.cupPlugin.highlighing.CupColorSettingsPage"/>
+        <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
     </extensions>
 
     <actions>
