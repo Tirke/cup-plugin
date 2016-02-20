@@ -15,11 +15,16 @@ import static tirke.cupPlugin.psi.CupTypes.*;
 %eof{  return;
 %eof}
 
-WHITESPACE = {LineTerminator} | [ \t\f]
-LineTerminator = \n|\r|\r\n;
+%state OPT_JAVA_CODE
+
+
+
+LineTerminator = \r|\n|\r\n
+WhiteSpace = [ \t]
+AnySpace = {LineTerminator} | {WhiteSpace} | [\f]
 
 IDENTIFIER=[a-zA-Z_0-9]+
-JAVA_CODE="{:"~":}"
+//JAVA_CODE="{:"~":}"
 
 COMMENT = {TraditionalComment} | {DocumentationComment} | {LineComment}
 
@@ -35,6 +40,8 @@ LineComment = [ \t]* "//" .*
   "::="              { return CCEQ; }
   ":"                { return COLON; }
   ","                { return COMMA; }
+  "{:"               { yybegin(OPT_JAVA_CODE); return  LEFTCUPBRACES; }
+  ":}"               { return  RIGHTCUPBRACES; }
   "."                { return DOT; }
   ";"                { return SEMI; }
   "*"                { return STAR; }
@@ -61,12 +68,18 @@ LineComment = [ \t]* "//" .*
 
 
   {IDENTIFIER}       { return IDENTIFIER; }
-  {JAVA_CODE}        { return JAVA_CODE; }
+  //{JAVA_CODE}        { return JAVA_CODE; }
   {COMMENT}          { return COMMENT; }
 
 
   //Special
 
-  {WHITESPACE}       { return TokenType.WHITE_SPACE; }
+  {AnySpace}       { return TokenType.WHITE_SPACE; }
   [^]                { return TokenType.BAD_CHARACTER; }
+}
+
+<OPT_JAVA_CODE> {
+
+    ":}"                   { yybegin(YYINITIAL); yypushback(yylength()); }
+    [^]                    { yybegin(OPT_JAVA_CODE); return JAVA; }
 }

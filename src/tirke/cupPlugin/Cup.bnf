@@ -1,5 +1,6 @@
 {
     parserClass = "tirke.cupPlugin.parser.CupParser"
+    parserUtilClass="tirke.cupPlugin.parser.CupParserUtil"
     extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
 
     psiClassPrefix = "Cup"
@@ -21,6 +22,8 @@
     CCEQ = "::="
     COLON = ":"
     COMMA = ","
+    LEFTCUPBRACES = "{:"
+    RIGHTCUPBRACES = ":}"
     DOT = "."
     SEMI = ";"
     STAR = "*"
@@ -56,6 +59,9 @@
     identifier = "regexp:\w+"
     comment="regexp:/\*(.|\n)*\*/"
 
+    space='regexp:\s+'
+
+
     ]
 
 }
@@ -65,7 +71,7 @@ cupSpec             ::=  packageDeclaration? importDeclaration* className? codeP
                          precedences* startWith? production+
 
 
-packageDeclaration  ::= PACKAGE qualifiedName SEMI {pin = 2}
+packageDeclaration  ::= PACKAGE qualifiedName SEMI
 
 
 importDeclaration   ::= IMPORT STATIC? qualifiedName (DOT STAR)? SEMI
@@ -76,13 +82,13 @@ className           ::= CLASS identifier SEMI
 codeParts           ::= actionCode? parserCode? initCode? scanCode?
 
 
-actionCode          ::= ACTION CODE JAVA_CODE SEMI?
+actionCode          ::= ACTION CODE java_code SEMI?
 
-parserCode          ::= PARSER CODE JAVA_CODE SEMI?
+parserCode          ::= PARSER CODE java_code SEMI?
 
-initCode            ::= INIT WITH JAVA_CODE SEMI?
+initCode            ::= INIT WITH java_code SEMI?
 
-scanCode            ::= SCAN WITH JAVA_CODE SEMI?
+scanCode            ::= SCAN WITH java_code SEMI?
 
 /*terminalDefinition  ::= TERMINAL typeId? termNameList
 
@@ -104,19 +110,18 @@ rhs                 ::= prod_part_list PERCENT_PREC term_id
 
 
 prod_part_list      ::= prod_part*
-
 prod_part           ::= symbol_id opt_label?
-                    |   JAVA_CODE
+                    |   java_code
+
+java_code           ::= '{:' JAVA* ':}'
 
 opt_label           ::= COLON label_id
-
 typeId              ::= qualifiedName
-
-termNameList        ::= identifier (COMMA identifier)* SEMI
-
 rule_id             ::= identifier
 symbol_id           ::= identifier
 term_id             ::= identifier
 label_id            ::= identifier
+
+termNameList        ::= identifier (COMMA identifier)* SEMI
 qualifiedName       ::= identifier (DOT identifier)*
 

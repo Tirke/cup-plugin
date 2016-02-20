@@ -65,7 +65,7 @@ public class CupColorSettingsPage implements ColorSettingsPage {
     @Override
     public String getDemoText() {
         return "// Small example of a CUP specification file\n" +
-                "package cup.package; \n" +
+                "package cup.test; \n" +
                 "import java_cup.runtime.*; \n" +
                 "init with {: scanner.init();              :}; \n" +
                 "scan with {: return scanner.next_token(); :}; \n" +
