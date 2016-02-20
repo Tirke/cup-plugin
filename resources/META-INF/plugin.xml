@@ -2,7 +2,7 @@
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
     <version>0.1</version>
-    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke/cup-plugin">SCHERSACH Thomas</vendor>
+    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">SCHERSACH Thomas</vendor>
 
     <description><![CDATA[
       Java CUP file support
@@ -35,7 +35,15 @@
         <lang.syntaxHighlighterFactory
                 language="Cup"
                 implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
-        <annotator language="Cup" implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
+        <completion.contributor
+                language="Cup"
+                implementationClass="tirke.cupPlugin.editor.CupCompletionContributor"/>
+        <lang.braceMatcher
+                language="Cup"
+                implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
+        <annotator
+                language="Cup"
+                implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
         <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
     </extensions>
 
