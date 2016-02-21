@@ -1,0 +1,18 @@
+// Small example of a CUP specification file
+package cup.test;
+import java_cup.runtime.*;
+
+
+init with {: scanner.init();              :};
+scan with {: return scanner.next_token(); :};
+
+terminal           PLUS, MINUS;
+
+non terminal Integer    expr;
+
+precedence left PLUS,MINUS;
+
+
+expr      ::= expr PLUS expr
+          | expr:e MINUS expr
+	      ;
