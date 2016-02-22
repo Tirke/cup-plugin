@@ -4,8 +4,8 @@ Cup file support plugin for IntelliJ IDEA
 
 ## Features
 
-- Basic Highlighting
-- Basic Auto Completion
+- Highlighting
+- Complete support of Java language in CUP files via language injection !
 
 This plugin is still in development.
 
