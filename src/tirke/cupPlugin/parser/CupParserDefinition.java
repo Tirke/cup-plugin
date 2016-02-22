@@ -1,4 +1,4 @@
-package tirke.cupPlugin;
+package tirke.cupPlugin.parser;
 
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.Language;
@@ -13,7 +13,7 @@ import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
 import org.jetbrains.annotations.NotNull;
-import tirke.cupPlugin.parser.CupParser;
+import tirke.cupPlugin.CupLanguage;
 import tirke.cupPlugin.psi.CupFile;
 import tirke.cupPlugin.psi.CupTypes;
 

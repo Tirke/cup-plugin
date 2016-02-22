@@ -1,6 +1,7 @@
-package tirke.cupPlugin;
+package tirke.cupPlugin.parser;
 
 import com.intellij.lexer.FlexAdapter;
+import tirke.cupPlugin.parser.CupLexer;
 
 import java.io.Reader;
 
