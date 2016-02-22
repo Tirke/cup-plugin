@@ -1,4 +1,6 @@
 {
+    generate=[names="long"]
+
     parserClass = "tirke.cupPlugin.parser.CupParser"
     parserUtilClass="tirke.cupPlugin.parser.CupParserUtil"
     extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
@@ -58,70 +60,65 @@
     // Regex
     identifier = "regexp:\w+"
     comment="regexp:/\*(.|\n)*\*/"
-
     space='regexp:\s+'
+
 
 
     ]
 
+    pin(".*Code")=1
+    pin(".*Declaration")=1
+    pin(".*Definition")=1
+
 }
 
 
-cupSpec             ::=  packageDeclaration? importDeclaration* className? codeParts symbols+
+cupSpec                 ::=  packageDeclaration? importDeclaration* classNameDeclaration? codeParts* symbols+
                          precedences* startWith? production+
 
+packageDeclaration      ::= 'package' qualifiedName ';'
+importDeclaration       ::= 'import' 'static'? qualifiedName ('.' '*')? ';'
+classNameDeclaration    ::= 'class' identifier ';'
 
-packageDeclaration  ::= PACKAGE qualifiedName SEMI
-
-
-importDeclaration   ::= IMPORT STATIC? qualifiedName (DOT STAR)? SEMI
-
-className           ::= CLASS identifier SEMI
-
-
-codeParts           ::= actionCode? parserCode? initCode? scanCode?
-
-
-actionCode          ::= ACTION CODE java_code SEMI?
-
-parserCode          ::= PARSER CODE java_code SEMI?
-
-initCode            ::= INIT WITH java_code SEMI?
-
-scanCode            ::= SCAN WITH java_code SEMI?
-
-/*terminalDefinition  ::= TERMINAL typeId? termNameList
-
-nonTerminalDefinition   ::= ( NON TERMINAL | NONTERMINAL) typeId? termNameList*/
-
-symbols             ::= (TERMINAL | NONTERMINAL | NON TERMINAL) typeId termNameList
-                    |   (TERMINAL | NONTERMINAL | NON TERMINAL)  termNameList
-
-precedences         ::= PRECED (LEFT | RIGHT | NONASSOC) termNameList
-
-startWith           ::= START WITH identifier SEMI
-
-production          ::= rule_id CCEQ rhs_list SEMI
-
-rhs_list            ::= rhs (BAR rhs)*
-
-rhs                 ::= prod_part_list PERCENT_PREC term_id
-                    |   prod_part_list
+private codeParts       ::= actionCode | parserCode | initCode | scanCode
+actionCode              ::= 'action' 'code' java_code ';'?
+parserCode              ::= 'parser' 'code' java_code ';'?
+initCode                ::= 'init' 'with' java_code ';'?
+scanCode                ::= 'scan' 'with' java_code ';'?
 
 
-prod_part_list      ::= prod_part*
-prod_part           ::= symbol_id opt_label?
-                    |   java_code
+private symbols             ::= terminalDefinition | nonTerminalDefinition
+                            |   typedNonTerminalDefinition | typedTerminalDefinition
 
-java_code           ::= '{:' JAVA* ':}'
+//private symbols_recover     ::= !('terminal' | 'non' | 'nonterminal')
+terminalDefinition          ::= 'terminal' termNameList
+typedTerminalDefinition     ::= 'terminal' typeId termNameList
+nonTerminalDefinition       ::= ( 'non' 'terminal' |'nonterminal' )  termNameList
+typedNonTerminalDefinition  ::= ( 'non' 'terminal' |'nonterminal' ) typeId termNameList
 
-opt_label           ::= COLON label_id
-typeId              ::= qualifiedName
-rule_id             ::= identifier
-symbol_id           ::= identifier
-term_id             ::= identifier
-label_id            ::= identifier
 
-termNameList        ::= identifier (COMMA identifier)* SEMI
-qualifiedName       ::= identifier (DOT identifier)*
+precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList
+startWith               ::= 'start' 'with' identifier ';'
+
+
+production              ::= rule_id '::=' rhs_list ';' {pin = 2}
+rhs_list                ::= rhs ('|' rhs)*
+rhs                     ::= prod_part_list '%prec' term_id
+                        |   prod_part_list
+prod_part_list          ::= prod_part*
+prod_part               ::= symbol_id opt_label?
+                        |   java_code
+
+
+java_code               ::= '{:' JAVA* ':}' {implements= "com.intellij.psi.PsiLanguageInjectionHost"
+                                             mixin = "tirke.cupPlugin.psi.impl.CupJavaImpl"}
+opt_label               ::= COLON label_id
+typeId                  ::= qualifiedName
+rule_id                 ::= identifier
+symbol_id               ::= identifier
+term_id                 ::= identifier
+label_id                ::= identifier
+
+termNameList            ::= identifier (COMMA identifier)* ';'
+qualifiedName           ::= identifier (DOT identifier)*
 
