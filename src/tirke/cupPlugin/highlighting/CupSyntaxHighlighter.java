@@ -9,7 +9,7 @@ import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.tree.TokenSet;
 import org.jetbrains.annotations.NotNull;
-import tirke.cupPlugin.CupLexerAdapter;
+import tirke.cupPlugin.parser.CupLexerAdapter;
 import tirke.cupPlugin.psi.CupTypes;
 
 import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey;

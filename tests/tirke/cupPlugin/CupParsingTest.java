@@ -1,6 +1,7 @@
 package tirke.cupPlugin;
 
 import com.intellij.testFramework.ParsingTestCase;
+import tirke.cupPlugin.parser.CupParserDefinition;
 
 /**
  * Created by Tirke on 21/02/2016
