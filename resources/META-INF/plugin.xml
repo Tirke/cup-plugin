@@ -10,6 +10,16 @@
 
     <change-notes>
         <![CDATA[
+        
+    <hr>
+    <div>
+        <b>0.3</b>
+        <ul>
+            <li>Removed Auto Completion</li>
+            <li>Grammar refactoring</li>
+            <li>Java Language Injection between "{: :}"</li>
+        </ul>
+    </div>
 
     <div>
         <b>0.2</b>
@@ -43,13 +53,14 @@
         <fileTypeFactory implementation="tirke.cupPlugin.CupFileTypeFactory"/>
         <lang.parserDefinition
                 language="Cup"
-                implementationClass="tirke.cupPlugin.CupParserDefinition"/>
+                implementationClass="tirke.cupPlugin.parser.CupParserDefinition"/>
         <lang.syntaxHighlighterFactory
                 language="Cup"
                 implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
-        <completion.contributor
+        <!--<completion.contributor
                 language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupCompletionContributor"/>
+                implementationClass="tirke.cupPlugin.editor.CupCompletionContributor"/>-->
+        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
         <lang.braceMatcher
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
