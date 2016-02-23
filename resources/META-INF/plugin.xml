@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
-    <version>0.3</version>
+    <version>0.4</version>
     <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">SCHERSACH Thomas</vendor>
 
     <description><![CDATA[
@@ -12,6 +12,14 @@
         <![CDATA[
 
     <hr>
+    <div>
+        <b>0.4</b>
+        <ul>
+            <li>Commenter</li>
+            <li>Java Language Injection fixes</li>
+        </ul>
+    </div>
+
     <div>
         <b>0.3</b>
         <ul>
@@ -59,14 +67,18 @@
                 implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
         <!--<completion.contributor
                 language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupCompletionContributor"/>-->
-        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
+                implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>-->
         <lang.braceMatcher
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
+        <lang.commenter
+                language="Cup"
+                implementationClass="tirke.cupPlugin.editor.CupCommenter"/>
+        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
         <annotator
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
+
         <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
     </extensions>
 

@@ -25,7 +25,7 @@ import static tirke.cupPlugin.psi.CupTypes.*;
 public class CupParserDefinition implements ParserDefinition {
 
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
-    public static final TokenSet COMMENTS = TokenSet.create(COMMENT);
+    public static final TokenSet COMMENTS = TokenSet.create(LINE_COMMENT,BLOCK_COMMENT);
 
     public static final IFileElementType FILE = new IFileElementType(Language.<CupLanguage>findInstance(CupLanguage.class));
 

@@ -1,4 +1,4 @@
-package tirke.cupPlugin.editor;
+package tirke.cupPlugin.completion;
 
 import com.intellij.codeInsight.completion.CompletionParameters;
 import com.intellij.codeInsight.completion.CompletionProvider;

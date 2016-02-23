@@ -22,7 +22,8 @@ public class CupColorSettingsPage implements ColorSettingsPage {
 
     private static final AttributesDescriptor[] ATTRS = new AttributesDescriptor[]{
             new AttributesDescriptor("Illegal character", ILLEGAL),
-            new AttributesDescriptor("Comment", COMMENT),
+            new AttributesDescriptor("Line Comment", LINE_COMMENT),
+            new AttributesDescriptor("Block Comment", BLOCK_COMMENT),
             new AttributesDescriptor("Comma", COMMA),
             new AttributesDescriptor("Semicolon", SEMI),
             new AttributesDescriptor("Keyword", KEYWORD),

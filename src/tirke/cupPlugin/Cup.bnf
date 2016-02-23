@@ -59,7 +59,8 @@
 
     // Regex
     identifier = "regexp:\w+"
-    comment="regexp:/\*(.|\n)*\*/"
+    line_comment='regexp://.*'
+    block_comment='regexp:/\*((?<!\*/)(.|\n))*'
     space='regexp:\s+'
 
 

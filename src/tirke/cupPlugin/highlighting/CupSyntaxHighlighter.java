@@ -21,15 +21,14 @@ import static tirke.cupPlugin.psi.CupTypes.*;
 public class CupSyntaxHighlighter extends SyntaxHighlighterBase {
 
     public static final TextAttributesKey ILLEGAL = createTextAttributesKey("CUP_ILLEGAL", HighlighterColors.BAD_CHARACTER);
-    public static final TextAttributesKey COMMENT = createTextAttributesKey("CUP_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
+    public static final TextAttributesKey LINE_COMMENT = createTextAttributesKey("CUP_LINE_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
+    public static final TextAttributesKey BLOCK_COMMENT = createTextAttributesKey("CUP_BLOCK_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT);
     public static final TextAttributesKey KEYWORD = createTextAttributesKey("CUP_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
-    public static final TextAttributesKey TOKEN = createTextAttributesKey("CUP_TOKEN", DefaultLanguageHighlighterColors.STRING);
     public static final TextAttributesKey COMMA = createTextAttributesKey("CUP_COMMA", DefaultLanguageHighlighterColors.COMMA);
     public static final TextAttributesKey SEMI = createTextAttributesKey("CUP_SEMI", DefaultLanguageHighlighterColors.SEMICOLON);
     public static final TextAttributesKey LABEL_ID = createTextAttributesKey("CUP_LABEL", DefaultLanguageHighlighterColors.INSTANCE_FIELD);
     public static final TextAttributesKey RULE_ID = createTextAttributesKey("CUP_RULE", DefaultLanguageHighlighterColors.FUNCTION_DECLARATION);
     public static final TextAttributesKey PUNCTUATION = createTextAttributesKey("CUP_PUNC", DefaultLanguageHighlighterColors.OPERATION_SIGN);
-
 
 
     @NotNull
@@ -63,8 +62,10 @@ public class CupSyntaxHighlighter extends SyntaxHighlighterBase {
     @NotNull
     @Override
     public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
-        if (tokenType.equals(CupTypes.COMMENT)) {
-            return pack(COMMENT);
+        if (tokenType.equals(CupTypes.LINE_COMMENT)) {
+            return pack(LINE_COMMENT);
+        } else if (tokenType.equals(CupTypes.BLOCK_COMMENT)) {
+            return pack(BLOCK_COMMENT);
         } else if (tokenType.equals(TokenType.BAD_CHARACTER)) {
             return pack(ILLEGAL);
         } else if (KEYWORDS.contains(tokenType)) {
@@ -73,7 +74,7 @@ public class CupSyntaxHighlighter extends SyntaxHighlighterBase {
             return pack(COMMA);
         } else if (tokenType.equals(CupTypes.SEMI)) {
             return pack(SEMI);
-        } else if (tokenType.equals(CupTypes.CCEQ) || tokenType.equals(CupTypes.BAR) || tokenType.equals(CupTypes.COLON)){
+        } else if (tokenType.equals(CupTypes.CCEQ) || tokenType.equals(CupTypes.BAR) || tokenType.equals(CupTypes.COLON)) {
             return pack(PUNCTUATION);
         }
         return EMPTY;

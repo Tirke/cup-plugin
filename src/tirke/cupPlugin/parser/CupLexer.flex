@@ -24,14 +24,10 @@ WhiteSpace = [ \t]
 AnySpace = {LineTerminator} | {WhiteSpace} | [\f]
 
 IDENTIFIER=[a-zA-Z_0-9]+
-//JAVA_CODE="{:"~":}"
 
-COMMENT = {TraditionalComment} | {DocumentationComment} | {LineComment}
 
-TraditionalComment   = "/*" [^*] ~"*/" | "/*" "*"+ "/"
-DocumentationComment = "/**" {CommentContent} "*"+ "/"
-CommentContent = ( [^*] | \*+ [^/*] )*
-LineComment = [ \t]* "//" .*
+LINE_COMMENT = "//".*
+BLOCK_COMMENT = "/*" ~"*/"
 
 %%
 <YYINITIAL> {
@@ -41,7 +37,7 @@ LineComment = [ \t]* "//" .*
   ":"                { return COLON; }
   ","                { return COMMA; }
   "{:"               { yybegin(OPT_JAVA_CODE); return  LEFTCUPBRACES; }
-  ":}"               { return  RIGHTCUPBRACES; }
+  ":}"               { return RIGHTCUPBRACES; }
   "."                { return DOT; }
   ";"                { return SEMI; }
   "*"                { return STAR; }
@@ -68,18 +64,16 @@ LineComment = [ \t]* "//" .*
 
 
   {IDENTIFIER}       { return IDENTIFIER; }
-  //{JAVA_CODE}        { return JAVA_CODE; }
-  {COMMENT}          { return COMMENT; }
-
+  {BLOCK_COMMENT}    { return BLOCK_COMMENT; }
+  {LINE_COMMENT}     { return LINE_COMMENT; }
 
   //Special
 
   {AnySpace}       { return TokenType.WHITE_SPACE; }
-  [^]                { return TokenType.BAD_CHARACTER; }
+  [^]              { return TokenType.BAD_CHARACTER; }
 }
 
 <OPT_JAVA_CODE> {
-
     ":}"                   { yybegin(YYINITIAL); yypushback(yylength()); }
     [^]                    { yybegin(OPT_JAVA_CODE); return JAVA; }
 }
