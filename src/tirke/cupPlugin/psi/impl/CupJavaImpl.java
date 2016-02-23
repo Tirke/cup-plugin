@@ -29,7 +29,6 @@ public class CupJavaImpl extends ASTWrapperPsiElement implements CupJavaCode {
 
     @Override
     public PsiLanguageInjectionHost updateText(@NotNull String text) {
-        System.out.println("debug");
         return null;
     }
 
@@ -45,12 +44,15 @@ public class CupJavaImpl extends ASTWrapperPsiElement implements CupJavaCode {
 
             @Override
             public int getOffsetInHost(int offsetInDecoded, @NotNull TextRange rangeInsideHost) {
-                return offsetInDecoded + rangeInsideHost.getStartOffset();
+                int offset = offsetInDecoded + rangeInsideHost.getStartOffset();
+                if (offset < rangeInsideHost.getStartOffset()) offset = rangeInsideHost.getStartOffset();
+                if (offset > rangeInsideHost.getEndOffset()) offset = rangeInsideHost.getEndOffset();
+                return offset;
             }
 
             @Override
             public boolean isOneLine() {
-                return false;
+                return true;
             }
         };
     }

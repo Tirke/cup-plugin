@@ -15,7 +15,6 @@ public class CupJavaInjector implements LanguageInjector {
 
     public static final String PREFIX = "{:";
     public static final String SUFFIX = ":}";
-    public static final int PREF_SUF_LENGTH = PREFIX.length() + SUFFIX.length();
 
     @Override
     public void getLanguagesToInject(@NotNull PsiLanguageInjectionHost host, @NotNull InjectedLanguagePlaces injectionPlacesRegistrar) {
@@ -28,7 +27,6 @@ public class CupJavaInjector implements LanguageInjector {
         if (!(text.startsWith(PREFIX) && text.endsWith(SUFFIX))) {
             return;
         }
-        injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE,new TextRange(SUFFIX.length(),text.length() - SUFFIX.length()),null,null);
-
+        injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE, new TextRange(SUFFIX.length(), text.length() - SUFFIX.length()), null, null);
     }
 }
