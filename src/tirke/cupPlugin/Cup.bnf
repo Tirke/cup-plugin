@@ -88,13 +88,13 @@ scanCode                ::= 'scan' 'with' java_code ';'?
 
 
 private symbols             ::= terminalDefinition | nonTerminalDefinition
-                            |   typedNonTerminalDefinition | typedTerminalDefinition
 
-//private symbols_recover     ::= !('terminal' | 'non' | 'nonterminal')
+
+//private symbols_recover   ::= !('terminal' | 'non' | 'nonterminal')
 terminalDefinition          ::= 'terminal' termNameList
-typedTerminalDefinition     ::= 'terminal' typeId termNameList
+                            |   'terminal' typeId termNameList
 nonTerminalDefinition       ::= ( 'non' 'terminal' |'nonterminal' )  termNameList
-typedNonTerminalDefinition  ::= ( 'non' 'terminal' |'nonterminal' ) typeId termNameList
+                            | ( 'non' 'terminal' |'nonterminal' ) typeId termNameList
 
 
 precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList
