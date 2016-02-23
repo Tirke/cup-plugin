@@ -27,6 +27,6 @@ public class CupJavaInjector implements LanguageInjector {
         if (!(text.startsWith(PREFIX) && text.endsWith(SUFFIX))) {
             return;
         }
-        injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE, new TextRange(SUFFIX.length(), text.length() - SUFFIX.length()), null, null);
+        injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE, new TextRange(SUFFIX.length(), text.length() - SUFFIX.length()), "public class Dummy { public void dummyMethod(){", "}}");
     }
 }
