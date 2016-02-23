@@ -91,10 +91,9 @@ private symbols             ::= terminalDefinition | nonTerminalDefinition
 
 
 //private symbols_recover   ::= !('terminal' | 'non' | 'nonterminal')
-terminalDefinition          ::= 'terminal' termNameList
-                            |   'terminal' typeId termNameList
-nonTerminalDefinition       ::= ( 'non' 'terminal' |'nonterminal' )  termNameList
-                            | ( 'non' 'terminal' |'nonterminal' ) typeId termNameList
+terminalDefinition          ::= 'terminal' (termNameList | typeId termNameList)
+nonTerminalDefinition       ::= ( 'non' 'terminal' |'nonterminal' )  (termNameList | typeId termNameList)
+
 
 
 precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList
@@ -112,7 +111,7 @@ prod_part               ::= symbol_id opt_label?
 
 java_code               ::= '{:' JAVA* ':}' {implements= "com.intellij.psi.PsiLanguageInjectionHost"
                                              mixin = "tirke.cupPlugin.psi.impl.CupJavaImpl"}
-opt_label               ::= COLON label_id
+opt_label               ::= ':' label_id
 typeId                  ::= qualifiedName
 rule_id                 ::= identifier
 symbol_id               ::= identifier
