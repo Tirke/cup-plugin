@@ -6,6 +6,7 @@ Cup file support plugin for IntelliJ IDEA
 
 - Highlighting
 - Complete support of Java language in CUP files via language injection !
+- Terminal and Non Terminal references and completion
 
 This plugin is still in development.
 
