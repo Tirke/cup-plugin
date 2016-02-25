@@ -9,6 +9,7 @@
     psiImplClassSuffix = "Impl"
     psiPackage = "tirke.cupPlugin.psi"
     psiImplPackage = "tirke.cupPlugin.psi.impl"
+    psiImplUtilClass = "tirke.cupPlugin.psi.impl.CupPsiImplUtil"
 
 
     elementTypeHolderClass = "tirke.cupPlugin.psi.CupTypes"
@@ -69,7 +70,6 @@
 
     pin(".*Code")=1
     pin(".*Declaration")=1
-    pin(".*Definition")=1
 
 }
 
@@ -88,12 +88,15 @@ initCode                ::= 'init' 'with' java_code ';'?
 scanCode                ::= 'scan' 'with' java_code ';'?
 
 
-private symbols             ::= terminalDefinition | nonTerminalDefinition
-
+symbols                 ::= ( 'terminal' | 'non' 'terminal' | 'nonterminal' )
+                            ( typeId symbolDefinition (',' symbolDefinition)*
+                            | symbolDefinition (',' symbolDefinition)* )  ';' {pin = 1}
 
 //private symbols_recover   ::= !('terminal' | 'non' | 'nonterminal')
-terminalDefinition          ::= 'terminal' (termNameList | typeId termNameList)
-nonTerminalDefinition       ::= ( 'non' 'terminal' |'nonterminal' )  (termNameList | typeId termNameList)
+
+symbolDefinition        ::= identifier {implements = "tirke.cupPlugin.psi.CupNamedElement"
+                                       extends = "tirke.cupPlugin.psi.impl.CupNamedElementImpl"}
+
 
 
 
@@ -101,24 +104,20 @@ precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNam
 startWith               ::= 'start' 'with' identifier ';'
 
 
-production              ::= rule_id '::=' rhs_list ';' {pin = 2}
-rhs_list                ::= rhs ('|' rhs)*
-rhs                     ::= prod_part_list '%prec' term_id
-                        |   prod_part_list
-prod_part_list          ::= prod_part*
-prod_part               ::= symbol_id opt_label?
+production              ::= rule_id '::=' rhs ('|' rhs)* ';' {pin = 2}
+rhs                     ::= prod_part* ['%prec' term_id]
+prod_part               ::= symbol_id (':' label_id)?
                         |   java_code
 
 
 java_code               ::= '{:' JAVA* ':}' {implements= "com.intellij.psi.PsiLanguageInjectionHost"
                                              mixin = "tirke.cupPlugin.psi.impl.CupJavaImpl"}
-opt_label               ::= ':' label_id
 typeId                  ::= qualifiedName
 rule_id                 ::= identifier
-symbol_id               ::= identifier
+symbol_id               ::= identifier { methods = [getReference] }
 term_id                 ::= identifier
 label_id                ::= identifier
 
-termNameList            ::= identifier (COMMA identifier)* ';'
-qualifiedName           ::= identifier (DOT identifier)*
+termNameList            ::= identifier (',' identifier)* ';'
+qualifiedName           ::= identifier ('.' identifier)*
 

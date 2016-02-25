@@ -1,7 +1,9 @@
 package tirke.cupPlugin.psi;
 
 import com.intellij.openapi.project.Project;
+import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFileFactory;
+import com.sun.istack.internal.NotNull;
 import tirke.cupPlugin.CupFileType;
 
 /**
@@ -15,6 +17,8 @@ public class CupPsiElementFactory {
                 createFileFromText(name, CupFileType.INSTANCE, text);
     }
 
-
+    public static PsiElement createIdentifierFromText(@NotNull Project project, @NotNull String text){
+       return null;
+    }
 
 }
