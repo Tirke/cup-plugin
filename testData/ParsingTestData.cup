@@ -1,18 +1,117 @@
-// Small example of a CUP specification file
-package cup.test;
+package generated;
 import java_cup.runtime.*;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 
-init with {: scanner.init();              :};
-scan with {: return scanner.next_token(); :};
 
-terminal           PLUS, MINUS;
+action code {:
+    public Map<String, GregorianCalendar> ipDateMap = new HashMap<String, GregorianCalendar>(); // Map qui lie Un Ip a une date de début
+    public Map<String, Long> ipDureeMap = new HashMap<String, Long>(); // Map qui lie un Ip à une durée de session
+    public ArrayList<Long> listDuree = new ArrayList<Long>();
+    /*Compteur du nombre de sessions*/
+    public int nbSession = 0;
 
-non terminal Integer    expr;
+:}
 
-precedence left PLUS,MINUS;
+/* contrôle des erreurs de syntaxe : surcharge */
+parser code {:
+    public void syntax_error(Symbol cur_token){}
+    public void unrecovered_syntax_error(Symbol cur_token) throws Exception{
+        throw new Exception("Erreur");
+    }
+:}
 
 
-expr      ::= expr PLUS expr
-          | expr:e MINUS expr
-	      ;
+
+
+/* la grammaire */
+
+terminal CO, CF, SL, DP;
+terminal JAN, FEV, MAR, AVR, MAI, JUIN, JUIL, AOU, SEP, OCT, NOV, DEC;
+terminal DECAL;
+terminal String StringTest;
+
+
+non terminal beg,l;
+non terminal String po;
+
+
+start with beg;
+
+/*------debut-------*/
+
+beg         ::= l  {:
+                /*le parcours du fichier est terminé, on compte de le nombre de session grâce à la Map*/
+                                for (int j = 0; j < ipDateMap.size(); j++) {
+                                    nbSession++;
+                                }
+
+                                for (Long value : ipDureeMap.values()) {
+                                    listDuree.add(value);
+                                }
+
+                                long moyenne = 0;
+
+                                for (Long aListDuree : listDuree) {
+                                    moyenne += aListDuree;
+                                }
+
+                                moyenne = moyenne / listDuree.size();
+
+                                System.out.println("La durée moyenne d'une session est : " + TimeUnit.MILLISECONDS.toMinutes(moyenne) + " minute(s) ou " + TimeUnit.MILLISECONDS.toSeconds(moyenne) + " secondes"  );
+
+                                /*On affiche le résultat*/
+                                System.out.println();
+                                System.out.println("Il y a eu " + nbSession + " sessions dans le fichier de log");
+                    :}
+          ;
+
+l           ::= IP:i timestamp:d STR NUM NUM l {:
+
+                if (ipDateMap.containsKey(i)) {
+                                    long compare = ipDateMap.get(i).getTimeInMillis() - d.getTimeInMillis();
+
+                                    /*
+                                    *   On choisit 10 minutes pour la durée maximale d'une session,
+                                    *   Si supérieur : on remplace l'adresse IP dans la Map
+                                    */
+                                    if (TimeUnit.MILLISECONDS.toMinutes(compare) >= 10) {
+                                        listDuree.add(ipDureeMap.get(i));
+                                        nbSession++;
+                                        ipDateMap.put(i, d);
+                                        ipDureeMap.put(i,(long) 0);
+                                    } else {
+                                        ipDateMap.put(i, d);
+                                        ipDureeMap.put(i, compare);
+                                    }
+
+                                } else {
+                                    ipDureeMap.put(i,(long)0);
+                                    ipDateMap.put(i, d);
+                                }
+                :}
+            | // Ou rien
+                ;
+
+timestamp	::= CO:a NUM:jour SL:b mois:mois SL:c NUM:annee DP:d NUM:heure DP:e NUM:minute DP:f NUM:seconde DECAL:g CF:h {:
+                RESULT = new GregorianCalendar(annee, mois, jour, heure, minute, seconde);
+                :}
+    		;
+
+mois 	::= JAN {: RESULT = 0; :}
+		| FEV {: RESULT = 1; :}
+		| MAR {: RESULT = 2; :}
+		| AVR {: RESULT = 3; :}
+		| MAI {: RESULT = 4; :}
+		| JUIN {: RESULT = 5; :}
+		| JUIL {: RESULT = 6; :}
+		| AOU {: RESULT = 7; :}
+		| SEP {: RESULT = 8; :}
+		| OCT {: RESULT = 9; :}
+		| NOV {: RESULT = 10; :}
+		| DEC {: RESULT = 11; :}
+		;
+/*------fin--------*/
+
