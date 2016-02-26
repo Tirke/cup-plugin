@@ -23,6 +23,18 @@ public class CupFindUsagesProvider implements FindUsagesProvider {
         return psiElement instanceof CupNamedElement;
     }
 
+
+    @NotNull
+    @Override
+    public String getDescriptiveName(@NotNull PsiElement element) {
+        if (element instanceof CupSymbolDefinition){
+            return ((CupSymbolDefinition) element).getName();
+        } else {
+            return "";
+        }
+    }
+
+
     @Nullable
     @Override
     public String getHelpId(@NotNull PsiElement psiElement) {
@@ -41,21 +53,7 @@ public class CupFindUsagesProvider implements FindUsagesProvider {
 
     @NotNull
     @Override
-    public String getDescriptiveName(@NotNull PsiElement element) {
-        if (element instanceof CupSymbolDefinition){
-            return ((CupSymbolDefinition) element).getName();
-        } else {
-            return "";
-        }
-    }
-
-    @NotNull
-    @Override
     public String getNodeText(@NotNull PsiElement element, boolean useFullName) {
-        if (element instanceof CupSymbolDefinition) {
-            return ((CupSymbolDefinition) element).getName();
-        } else {
-            return "";
-        }
+       return getDescriptiveName(element);
     }
 }
