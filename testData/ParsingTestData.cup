@@ -31,16 +31,30 @@ parser code {:
 terminal CO, CF, SL, DP;
 terminal JAN, FEV, MAR, AVR, MAI, JUIN, JUIL, AOU, SEP, OCT, NOV, DEC;
 terminal DECAL;
-terminal String StringTest;
-
+terminal NUMERIQUE;
 
 non terminal beg,l;
 non terminal String po;
 
-
 start with beg;
 
 /*------debut-------*/
+
+mois 	::= JAN {: RESULT = 0; :}
+		| FEV {: RESULT = 1; :}
+		| MAR {: RESULT = 2; :}
+		| AVR {: RESULT = 3; :}
+		| MAI {: RESULT = 4; :}
+		| JUIN {: RESULT = 5; :}
+		| JUIL {: RESULT = 6; :}
+		| AOU {: RESULT = 7; :}
+		| SEP {: RESULT = 8; :}
+		| OCT {: RESULT = 9; :}
+		| NOV {: RESULT = 10; :}
+		| DEC {: RESULT = 11; :}
+		;
+
+
 
 beg         ::= l  {:
                 /*le parcours du fichier est terminé, on compte de le nombre de session grâce à la Map*/
@@ -68,7 +82,7 @@ beg         ::= l  {:
                     :}
           ;
 
-l           ::= IP:i timestamp:d STR NUM NUM l {:
+l           ::= IP:i timestamp:d STR NUMERIQUE NUMERIQUE l  {:
 
                 if (ipDateMap.containsKey(i)) {
                                     long compare = ipDateMap.get(i).getTimeInMillis() - d.getTimeInMillis();
@@ -95,23 +109,12 @@ l           ::= IP:i timestamp:d STR NUM NUM l {:
             | // Ou rien
                 ;
 
-timestamp	::= CO:a NUM:jour SL:b mois:mois SL:c NUM:annee DP:d NUM:heure DP:e NUM:minute DP:f NUM:seconde DECAL:g CF:h {:
+
+
+timestamp	::= CO:a NUMERIQUE:jour SL:b mois:mois SL:c NUMERIQUE:annee DP:d NUMERIQUE:heure DP:e NUMERIQUE:minute DP:f NUMERIQUE:seconde DECAL:g CF:h {:
                 RESULT = new GregorianCalendar(annee, mois, jour, heure, minute, seconde);
                 :}
     		;
 
-mois 	::= JAN {: RESULT = 0; :}
-		| FEV {: RESULT = 1; :}
-		| MAR {: RESULT = 2; :}
-		| AVR {: RESULT = 3; :}
-		| MAI {: RESULT = 4; :}
-		| JUIN {: RESULT = 5; :}
-		| JUIL {: RESULT = 6; :}
-		| AOU {: RESULT = 7; :}
-		| SEP {: RESULT = 8; :}
-		| OCT {: RESULT = 9; :}
-		| NOV {: RESULT = 10; :}
-		| DEC {: RESULT = 11; :}
-		;
-/*------fin--------*/
 
+/*------fin--------*/
