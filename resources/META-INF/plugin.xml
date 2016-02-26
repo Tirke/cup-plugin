@@ -69,6 +69,9 @@
         <!--<completion.contributor
                 language="Cup"
                 implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>-->
+        <lang.findUsagesProvider
+                language="Cup"
+                implementationClass="tirke.cupPlugin.editor.CupFindUsagesProvider"/>
         <lang.braceMatcher
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
