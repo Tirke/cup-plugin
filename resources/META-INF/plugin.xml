@@ -58,7 +58,6 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
         <fileTypeFactory implementation="tirke.cupPlugin.CupFileTypeFactory"/>
         <lang.parserDefinition
                 language="Cup"
@@ -66,9 +65,9 @@
         <lang.syntaxHighlighterFactory
                 language="Cup"
                 implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
-        <!--<completion.contributor
+        <completion.contributor
                 language="Cup"
-                implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>-->
+                implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>
         <lang.findUsagesProvider
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupFindUsagesProvider"/>

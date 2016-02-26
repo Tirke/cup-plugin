@@ -14,10 +14,5 @@ public class CupTokenType extends IElementType {
         super(debugName, CupLanguage.INSTANCE);
     }
 
-    @Override
-    public String toString() {
-        return "CupTokenType." + super.toString();
-    }
-
 
 }
