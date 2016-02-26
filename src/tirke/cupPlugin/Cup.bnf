@@ -74,8 +74,8 @@
 }
 
 
-cupSpec                 ::=  packageDeclaration? importDeclaration* classNameDeclaration? codeParts* symbols+
-                         precedences* startWith? production+
+cupSpec                 ::=  packageDeclaration? importDeclaration* classNameDeclaration? codeParts* symbols*
+                         precedences* startWith? production*
 
 packageDeclaration      ::= 'package' qualifiedName ';'
 importDeclaration       ::= 'import' 'static'? qualifiedName ('.' '*')? ';'

@@ -25,8 +25,9 @@ public class CupPsiImplUtil {
 
     @NotNull
     public static PsiNameIdentifierOwner setName(PsiNameIdentifierOwner element, String newName) {
-        //ObjectUtils.assertNotNull(element.getNameIdentifier()).replace();
-        throw new IncorrectOperationException();
+        ObjectUtils.assertNotNull(element.getNameIdentifier()).
+                replace(CupPsiElementFactory.createSymbolFromText(element.getProject(), newName));
+        return element;
     }
 
     @NotNull
@@ -60,6 +61,12 @@ public class CupPsiImplUtil {
                 processSymbolsVariants(getElement(), processor);
                 return ArrayUtil.toObjectArray(processor.getResults());
             }
+
+            @Override
+            public PsiElement handleElementRename(String newElementName) throws IncorrectOperationException {
+                System.out.println("HandleElementRename");
+                return getElement().getIdentifier().replace(CupPsiElementFactory.createSymbolFromText(getElement().getProject(),newElementName));
+            }
         };
 
     }
@@ -84,6 +91,7 @@ public class CupPsiImplUtil {
         file.acceptChildren(new PsiRecursiveElementWalkingVisitor() {
             @Override
             public void visitElement(PsiElement element) {
+                System.out.println("je suis con" + element);
                 if (tClass.isInstance(element)) {
                     result.add((T) element);
                 } else if (!(element instanceof CupPackageDeclaration) &&
