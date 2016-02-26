@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
-    <version>0.4</version>
+    <version>0.5</version>
     <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">SCHERSACH Thomas</vendor>
 
     <description><![CDATA[
@@ -12,6 +12,15 @@
         <![CDATA[
 
     <hr>
+    <div>
+        <b>0.5</b>
+        <ul>
+            <li>Auto Completion for Keywords</li>
+            <li>Get Usages in rules and Rename Element</li>
+            <li>Highlighting changes</li>
+        </ul>
+    </div>
+
     <div>
         <b>0.4</b>
         <ul>
@@ -58,7 +67,8 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileTypeFactory implementation="tirke.cupPlugin.CupFileTypeFactory"/>
+        <fileTypeFactory
+                implementation="tirke.cupPlugin.CupFileTypeFactory"/>
         <lang.parserDefinition
                 language="Cup"
                 implementationClass="tirke.cupPlugin.parser.CupParserDefinition"/>
@@ -77,11 +87,11 @@
         <lang.commenter
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupCommenter"/>
-        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
         <annotator
                 language="Cup"
                 implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
 
+        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
         <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
     </extensions>
 

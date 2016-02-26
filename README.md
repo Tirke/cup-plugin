@@ -5,8 +5,9 @@ Cup file support plugin for IntelliJ IDEA
 ## Features
 
 - Highlighting
+- Auto Completion for Symbols and keywords 
 - Complete support of Java language in CUP files via language injection !
-- Terminal and Non Terminal references and completion
+- Terminal and Non Terminal references, usages and rename
 
 This plugin is still in development.
 
