@@ -28,7 +28,8 @@ public class CupColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("Semicolon", SEMI),
             new AttributesDescriptor("Keyword", KEYWORD),
             new AttributesDescriptor("Label identifier", LABEL_ID),
-            new AttributesDescriptor("Rule identifier", RULE_ID),
+            new AttributesDescriptor("Terminal identifier", TERM_ID),
+            new AttributesDescriptor("Non Terminal identifier", NON_TERM_ID),
             new AttributesDescriptor("Operators", PUNCTUATION),
     };
 
@@ -76,8 +77,8 @@ public class CupColorSettingsPage implements ColorSettingsPage {
                 "non terminal Integer    expr;\n" +
                 "\n" +
                 "precedence left PLUS,MINUS;\n" +
-                "<r>expr</r>      ::= expr PLUS expr \n" +
-                "            | expr:<l>e</l> MINUS expr  \n" +
+                "<nt>expr</nt>      ::= <nt>expr</nt> <t>PLUS</t> <nt>expr</nt> \n" +
+                "            | <nt>expr</nt>:<l>e</l> <t>MINUS</t> <nt>expr</nt>  \n" +
                 "\t    ;"
                 ;
     }
@@ -87,7 +88,8 @@ public class CupColorSettingsPage implements ColorSettingsPage {
     public Map<String, TextAttributesKey> getAdditionalHighlightingTagToDescriptorMap() {
         Map<String, TextAttributesKey> map = new THashMap<>();
         map.put("l",LABEL_ID);
-        map.put("r",RULE_ID);
+        map.put("nt",NON_TERM_ID);
+        map.put("t",TERM_ID);
         return map;
     }
 

@@ -99,13 +99,12 @@ symbolDefinition        ::= identifier {implements = "tirke.cupPlugin.psi.CupNam
 
 
 
-precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList
+precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList {pin = 1}
 
-startWith               ::= 'start' 'with' identifier ';'
+startWith               ::= 'start' 'with' identifier ';' {pin = 1}
 
 
-production              ::= rule_id '::=' rhs ('|' rhs)* ';' {pin = 2}
-rule_id                 ::= identifier
+production              ::= symbol_id '::=' rhs ('|' rhs)* ';' {pin = 1}
 rhs                     ::= prod_part* ['%prec' symbol_id]
 prod_part               ::= symbol_id (':' label_id)?
                         |   java_code

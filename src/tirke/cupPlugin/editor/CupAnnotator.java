@@ -7,7 +7,7 @@ import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
 import tirke.cupPlugin.highlighting.CupSyntaxHighlighter;
 import tirke.cupPlugin.psi.CupLabelId;
-import tirke.cupPlugin.psi.CupRuleId;
+import tirke.cupPlugin.psi.CupSymbolId;
 import tirke.cupPlugin.psi.CupVisitor;
 
 /**
@@ -25,9 +25,14 @@ public class CupAnnotator implements Annotator {
             }
 
             @Override
-            public void visitRuleId(@NotNull CupRuleId o) {
-                super.visitRuleId(o);
-                setHighlighting(o, holder, CupSyntaxHighlighter.RULE_ID);
+            public void visitSymbolId(@NotNull CupSymbolId o) {
+                super.visitSymbolId(o);
+                if (isUpperCase(o.getText())) {
+                    setHighlighting(o, holder, CupSyntaxHighlighter.TERM_ID);
+                } else {
+                    setHighlighting(o, holder, CupSyntaxHighlighter.NON_TERM_ID);
+                }
+
             }
         });
     }
@@ -35,5 +40,14 @@ public class CupAnnotator implements Annotator {
     private static void setHighlighting(@NotNull PsiElement element, @NotNull AnnotationHolder holder,
                                         @NotNull TextAttributesKey key) {
         holder.createInfoAnnotation(element, null).setTextAttributes(key);
+    }
+
+    private static boolean isUpperCase(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isLowerCase(s.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

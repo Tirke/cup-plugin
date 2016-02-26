@@ -27,7 +27,8 @@ public class CupSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributesKey COMMA = createTextAttributesKey("CUP_COMMA", DefaultLanguageHighlighterColors.COMMA);
     public static final TextAttributesKey SEMI = createTextAttributesKey("CUP_SEMI", DefaultLanguageHighlighterColors.SEMICOLON);
     public static final TextAttributesKey LABEL_ID = createTextAttributesKey("CUP_LABEL", DefaultLanguageHighlighterColors.INSTANCE_FIELD);
-    public static final TextAttributesKey RULE_ID = createTextAttributesKey("CUP_RULE", DefaultLanguageHighlighterColors.FUNCTION_DECLARATION);
+    public static final TextAttributesKey NON_TERM_ID = createTextAttributesKey("CUP_NON_TERM", DefaultLanguageHighlighterColors.FUNCTION_DECLARATION);
+    public static final TextAttributesKey TERM_ID = createTextAttributesKey("CUP_TERM", DefaultLanguageHighlighterColors.STRING);
     public static final TextAttributesKey PUNCTUATION = createTextAttributesKey("CUP_PUNC", DefaultLanguageHighlighterColors.OPERATION_SIGN);
 
 
