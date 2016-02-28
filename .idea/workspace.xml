@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178f1003-626b-4a39-9b0f-cae3a61542b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java" />
     </list>
     <ignored path="Cup support.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,30 +30,14 @@
     <favorites_list name="Cup support" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.14492753">
-                <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="ProjectComponent" />
         <option value="Class" />
       </list>
     </option>
@@ -64,13 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/Elm.bnf" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/_ElmLexer.flex" />
-        <option value="$PROJECT_DIR$/samples/test1.txt" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/_CupLexer.java" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/_CupLexer.flex" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupFile.java" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/highlighing/CupSyntaxHighlighterFactory.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/CupParserDefinition.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/JavaInjector.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/highlighing/CupSyntaxHighlighter.java" />
@@ -92,7 +74,6 @@
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserUtil.java" />
         <option value="$PROJECT_DIR$/gen/tirke/cupPlugin/psi/impl/CupJavaCodeImpl.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupJavaImpl.java" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupLexer.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserDefinition.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupCommenter.java" />
@@ -113,8 +94,16 @@
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupAnnotator.java" />
         <option value="$PROJECT_DIR$/testData/ParsingTestData.cup" />
         <option value="$PROJECT_DIR$/testData/ParsingTestData.txt" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java" />
+        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.form" />
+        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/swing/JCheckBox.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
       </list>
     </option>
   </component>
@@ -155,9 +144,17 @@
             <id>Gradle</id>
           </State>
           <State>
+            <id>Grammar Inspections</id>
+          </State>
+          <State>
             <id>Probable bugsGradle</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -208,70 +205,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cupPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cup support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -286,7 +219,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.hocon.settings.HoconProjectSettingsConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -294,9 +227,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intellij-erlang-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intellij-plugins-master/Dart" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="getContaining&#9;PSI&#9;JAVA://com.intellij.vcs.log.VcsLog#getContainingBranches&#10;PsiLang&#9;PSI&#9;JAVA://tirke.cupPlugin.psi.CupVisitor#visitPsiLanguageInjectionHost&#10;PsiLan&#9;PSI&#9;JAVA://com.intellij.psi.PsiLanguageInjectionHost&#10;ICompos&#9;PSI&#9;JAVA://com.intellij.psi.tree.ICompositeElementType" />
+    <property name="SearchEverywhereHistoryKey" value="inje&#9;PSI&#9;JAVA://tirke.cupPlugin.editor.CupJavaInjector&#10;PropertiesC&#9;PSI&#9;JAVA://com.intellij.ide.util.PropertiesComponent&#10;ConfigurablePr&#9;PSI&#9;JAVA://com.intellij.openapi.options.ConfigurableProvider&#10;getContaining&#9;PSI&#9;JAVA://com.intellij.vcs.log.VcsLog#getContainingBranches&#10;PsiLang&#9;PSI&#9;JAVA://tirke.cupPlugin.psi.CupVisitor#visitPsiLanguageInjectionHost&#10;PsiLan&#9;PSI&#9;JAVA://com.intellij.psi.PsiLanguageInjectionHost&#10;ICompos&#9;PSI&#9;JAVA://com.intellij.psi.tree.ICompositeElementType" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="PsiViewer.ProjectComponent">
@@ -325,7 +258,7 @@
       <recent name="$PROJECT_DIR$/src/tirke/cupPlugin/parser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Cup support">
+  <component name="RunManager" selected="JUnit.CupParsingTest">
     <configuration default="false" name="_CupLexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -912,8 +845,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Cup support" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CupParsingTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CupParsingTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Cup support" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.CupParsingTest.testParsingTestData" />
         <item index="3" class="java.lang.String" itemvalue="Application._CupLexer" />
       </list>
@@ -945,7 +878,7 @@
       <workItem from="1456186205901" duration="416000" />
       <workItem from="1456186670724" duration="26268000" />
       <workItem from="1456442676528" duration="100000" />
-      <workItem from="1456442872176" duration="25557000" />
+      <workItem from="1456442872176" duration="43889000" />
     </task>
     <task id="LOCAL-00001" summary="Updated README">
       <created>1455889801061</created>
@@ -987,16 +920,16 @@
     <history-entry file="All_in_Cup_support - 2016.02.26 at 22h 01m 44s.xml">
       <configuration name="All in Cup support" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CupParsingTest - 2016.02.26 at 00h 18m 24s.xml">
-      <configuration name="CupParsingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CupParsingTest - 2016.02.26 at 00h 19m 00s.xml">
-      <configuration name="CupParsingTest" configurationId="JUnit" />
+    <history-entry file="All_in_Cup_support - 2016.02.28 at 16h 08m 49s.xml">
+      <configuration name="All in Cup support" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CupParsingTest - 2016.02.26 at 00h 19m 20s.xml">
       <configuration name="CupParsingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CupParsingTest - 2016.02.26 at 01h 22m 07s.xml">
+      <configuration name="CupParsingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CupParsingTest - 2016.02.28 at 18h 23m 47s.xml">
       <configuration name="CupParsingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CupParsingTest_testParsingTestData - 2016.02.21 at 03h 13m 00s.xml">
@@ -1013,11 +946,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157969000" />
+    <option name="totallyTimeSpent" value="176301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1032,7 +965,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1111,169 +1044,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4157304">
-          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/lang/Commenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.58426964">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupCommenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5955056">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupJavaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33483145">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/PsiNameIdentifierOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30337077">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7752809">
-          <caret line="29" column="148" selection-start-line="29" selection-start-column="148" selection-end-line="29" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/PsiFileFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056179777">
-          <caret line="62" column="87" selection-start-line="62" selection-start-column="87" selection-end-line="62" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/PsiReferenceBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4044943">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/util/src/com/intellij/openapi/diagnostic/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0449438">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/util/CachedValueProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.033707865">
-          <caret line="71" column="44" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Applications/IntelliJ IDEA 15 CE.app/Contents/lib/openapi.jar!/com/intellij/vcs/log/VcsLog.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33258426">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39325842">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/util/src/com/intellij/util/CommonProcessors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23595506">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/PsiReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1967455">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/psi/PsiElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33258426">
-          <caret line="444" column="15" selection-start-line="444" selection-start-column="15" selection-end-line="444" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17751479">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileTypeFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15532544">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15532544">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupNamedElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15532544">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupElementType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33258426">
-          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/Test.bnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1797752">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2182#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Intellij Source/idea/platform/indexing-api/src/com/intellij/lang/findUsages/FindUsagesProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2921349">
@@ -1425,25 +1195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/Test.cup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <marker date="1456186847000" expanded="true" signature="104:134" placeholder="{...}" />
-            <marker date="1456186847000" expanded="true" signature="150:180" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/Test2.cup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/highlighting/CupSyntaxHighlighter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1460,10 +1211,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.cup">
+    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.965977">
+          <caret line="3845" column="0" selection-start-line="3845" selection-start-column="0" selection-end-line="3845" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2204142">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5029586">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.4830918">
+            <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="21" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/platform-api/src/com/intellij/openapi/options/ConfigurableProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2662722">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66715974">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66715974">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37721893">
+          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/annotations/common/src/org/jetbrains/annotations/Nls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#1398#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/Test2.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/Test.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24408284">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <marker date="1456186847000" expanded="true" signature="104:134" placeholder="{...}" />
+            <marker date="1456186847000" expanded="true" signature="150:180" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <marker date="1456520368000" expanded="true" signature="157:542" placeholder="{...}" />
             <marker date="1456520368000" expanded="true" signature="348:362" placeholder="&lt;~&gt;" />
@@ -1489,61 +1349,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.txt">
+    <entry file="file:///Applications/Intellij Source/idea/platform/platform-api/src/com/intellij/openapi/options/Configurable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="23.965977">
-          <caret line="3845" column="0" selection-start-line="3845" selection-start-column="0" selection-end-line="3845" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="48" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java">
+    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/ide/util/PropertiesComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2204142">
-          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupAnnotator.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/swing/JCheckBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5029586">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.33258426">
+          <caret line="148" column="11" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="11" />
+          <folding>
+            <element signature="e#4128#4129#0" expanded="false" />
+            <element signature="e#4170#4171#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/platform-impl/src/com/intellij/ui/StateRestoringCheckBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8044944">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/platform-api/src/com/intellij/openapi/options/UnnamedConfigurable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7303371">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/projectModel-api/src/com/intellij/openapi/components/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33258426">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/openapi/components/ServiceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2988764">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/util/src/com/intellij/openapi/Disposable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#1334#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/lang-api/src/com/intellij/openapi/roots/ui/configuration/ModuleConfigurationEditorProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.505618">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/java/idea-ui/src/com/intellij/openapi/roots/ui/configuration/DefaultModuleEditorsProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16853933">
+          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/projectModel-api/src/com/intellij/openapi/components/StoragePathMacros.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33258426">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Intellij Source/idea/platform/platform-impl/src/com/intellij/openapi/components/ServiceDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23595506">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64044946">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf">
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9970415">
-          <caret line="90" column="87" selection-start-line="90" selection-start-column="87" selection-end-line="90" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.9101124">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding>
-            <element signature="e#0#1511#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#444#448#0" expanded="false" />
+            <element signature="e#537#546#0" expanded="false" />
+            <element signature="e#629#638#0" expanded="false" />
+            <element signature="method#createComponent#0;class#CupConfigurable#0" expanded="false" />
+            <element signature="method#apply#0;class#CupConfigurable#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46067417">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createUIComponents#0;class#CupSettingsForm#0" expanded="false" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupJavaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20224719">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1395705">
-          <caret line="93" column="83" selection-start-line="93" selection-start-column="83" selection-end-line="93" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.6413302">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.14492753">
-            <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46067417">
+          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>

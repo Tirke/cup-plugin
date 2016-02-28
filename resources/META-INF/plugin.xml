@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
-    <version>0.5</version>
+    <version>1.0</version>
     <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">SCHERSACH Thomas</vendor>
 
     <description><![CDATA[
@@ -12,6 +12,14 @@
         <![CDATA[
 
     <hr>
+
+    <div>
+        <b>1.0</b>
+        <ul>
+            <li>Option to disable Java Injection</li>
+        </ul>
+    </div>
+
     <div>
         <b>0.5</b>
         <ul>
@@ -93,6 +101,12 @@
 
         <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
         <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
+        <applicationConfigurable
+                instance="tirke.cupPlugin.options.CupConfigurable"
+                displayName="Cup" />
+        <applicationService
+                serviceInterface="tirke.cupPlugin.options.CupSettings"
+                serviceImplementation="tirke.cupPlugin.options.CupSettings" />
     </extensions>
 
     <actions>

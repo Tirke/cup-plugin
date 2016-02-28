@@ -6,6 +6,7 @@ import com.intellij.psi.InjectedLanguagePlaces;
 import com.intellij.psi.LanguageInjector;
 import com.intellij.psi.PsiLanguageInjectionHost;
 import org.jetbrains.annotations.NotNull;
+import tirke.cupPlugin.options.CupSettings;
 import tirke.cupPlugin.psi.impl.CupJavaImpl;
 
 /**
@@ -15,11 +16,12 @@ public class CupJavaInjector implements LanguageInjector {
 
     public static final String PREFIX = "{:";
     public static final String SUFFIX = ":}";
+    private CupSettings settings = CupSettings.getInstance();
 
     @Override
     public void getLanguagesToInject(@NotNull PsiLanguageInjectionHost host, @NotNull InjectedLanguagePlaces injectionPlacesRegistrar) {
 
-        if (!(host instanceof CupJavaImpl)) {
+        if (!(host instanceof CupJavaImpl) || !(settings.ENABLE_JAVA_INJECTION)) {
             return;
         }
         final CupJavaImpl cupJavaCode = (CupJavaImpl) host;
