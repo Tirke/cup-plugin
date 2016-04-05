@@ -41,9 +41,14 @@ BLOCK_COMMENT = "/*" ~"*/"
   "."                { return DOT; }
   ";"                { return SEMI; }
   "*"                { return STAR; }
+  "?"                { return QM; }
+  "<"                { return LEFTI; }
+  ">"                { return RIGHTI; }
   "class"            { return CLASS; }
   "import"           { return IMPORT; }
   "package"          { return PACKAGE; }
+  "extends"          { return EXTENDS; }
+  "super"            { return SUPER; }
   "static"           { return STATIC; }
   "action"           { return ACTION; }
   "code"             { return CODE; }

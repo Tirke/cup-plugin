@@ -25,17 +25,22 @@
     CCEQ = "::="
     COLON = ":"
     COMMA = ","
+    LEFTI = "<"
+    RIGHTI = ">"
     LEFTCUPBRACES = "{:"
     RIGHTCUPBRACES = ":}"
     DOT = "."
+    QM = "?"
     SEMI = ";"
     STAR = "*"
 
     // Java keywords
     CLASS = "class"
+    EXTENDS = "extends"
     IMPORT = "import"
     PACKAGE = "package"
     STATIC = "static"
+    SUPER = "super"
 
     // Cup keywords
     ACTION = "action"
@@ -92,7 +97,12 @@ symbols                 ::= ( 'terminal' | 'non' 'terminal' | 'nonterminal' )
 
 //private symbols_recover   ::= !('terminal' | 'non' | 'nonterminal')
 
-typeId                  ::= qualifiedName
+/* Quick hack for diamonds type */
+typeId                  ::= qualifiedName typeArguments?
+typeArguments           ::= '<' typeArgument? (',' typeArgument)* '>'
+typeArgument            ::=  qualifiedName
+                        |    '?' (('extends' | 'super') qualifiedName)?
+
 symbolDefinition        ::= identifier {implements = "tirke.cupPlugin.psi.CupNamedElement"
                                        extends = "tirke.cupPlugin.psi.impl.CupNamedElementImpl"}
 
