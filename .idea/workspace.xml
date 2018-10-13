@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178f1003-626b-4a39-9b0f-cae3a61542b0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cup support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cup support.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java" afterDir="false" />
     </list>
     <ignored path="Cup support.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,50 +22,55 @@
     <session id="1195911608">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="bnf" value="1" />
+          <entry key="bnf" value="2" />
           <entry key="class" value="4" />
-          <entry key="cup" value="1" />
+          <entry key="cup" value="2" />
           <entry key="flex" value="2" />
-          <entry key="java" value="28" />
-          <entry key="md" value="2" />
+          <entry key="form" value="1" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="47" />
+          <entry key="md" value="3" />
           <entry key="png" value="2" />
-          <entry key="skeleton" value="1" />
+          <entry key="skeleton" value="2" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="3" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="BNF" value="1" />
+          <entry key="BNF" value="2" />
           <entry key="CLASS" value="4" />
+          <entry key="Cup file" value="1" />
+          <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="28" />
+          <entry key="JAVA" value="47" />
           <entry key="JFlex" value="1" />
-          <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="XML" value="3" />
+          <entry key="Markdown" value="3" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bnf" value="1" />
-          <entry key="java" value="10" />
-          <entry key="xml" value="9" />
+          <entry key="java" value="13" />
+          <entry key="xml" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="BNF" value="1" />
-          <entry key="JAVA" value="10" />
-          <entry key="XML" value="9" />
+          <entry key="JAVA" value="13" />
+          <entry key="XML" value="101" />
         </counts>
       </usages-collector>
     </session>
@@ -79,52 +79,7 @@
     <favorites_list name="Cup support" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#984#985#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#createComponent#0;class#CupConfigurable#0" />
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1202#1203#0" expanded="true" />
-                <element signature="e#1256#1257#0" expanded="true" />
-                <element signature="e#1291#1292#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/CupParserDefinition.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/JavaInjector.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/highlighing/CupSyntaxHighlighter.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/highlighing/CupColorSettingsPage.java" />
@@ -176,10 +130,7 @@
         <option value="$PROJECT_DIR$/samples/test.js" />
         <option value="$PROJECT_DIR$/samples/Test2.cup" />
         <option value="$PROJECT_DIR$/samples/Test.cup" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupPsiElementFactory.java" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupFindUsagesProvider.java" />
-        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupTokenType.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/completion/CupCompletionContributor.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupLexer.flex" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/highlighting/CupSyntaxHighlighter.java" />
@@ -194,10 +145,14 @@
         <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/swing/JCheckBox.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java" />
         <option value="$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupPsiElementFactory.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupTokenType.java" />
+        <option value="$PROJECT_DIR$/src/tirke/cupPlugin/CupLanguage.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
       </list>
     </option>
   </component>
@@ -213,6 +168,12 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
@@ -252,8 +213,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,6 +225,17 @@
             <path>
               <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
               <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -275,51 +247,18 @@
             <path>
               <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
               <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="completion" type="462c0819:PsiDirectoryNode" />
+              <item name="testData" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
               <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="editor" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
               <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="highlighting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="options" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cup support" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cup-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cupPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="psi" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -832,7 +771,8 @@
       <workItem from="1456442676528" duration="100000" />
       <workItem from="1456442872176" duration="43889000" />
       <workItem from="1538761246963" duration="1403000" />
-      <workItem from="1539461470123" duration="921000" />
+      <workItem from="1539461470123" duration="1836000" />
+      <workItem from="1539463745456" duration="115000" />
     </task>
     <task id="LOCAL-00001" summary="Updated README">
       <created>1455889801061</created>
@@ -873,9 +813,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Cup_support - 2016.02.26 at 21h 59m 42s.xml">
-      <configuration name="All in Cup support" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_Cup_support - 2016.02.26 at 22h 01m 44s.xml">
       <configuration name="All in Cup support" configurationId="JUnit" />
     </history-entry>
@@ -903,13 +840,15 @@
     <history-entry file="CupParsingTest_testParsingTestData - 2016.02.23 at 01h 13m 46s.xml">
       <configuration name="CupParsingTest.testParsingTestData" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CupParsingTest - 2018.10.13 at 22h 36m 28s.xml">
+      <configuration name="CupParsingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178625000" />
+    <option name="totallyTimeSpent" value="179655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" weight="0.24959612" />
@@ -928,13 +867,13 @@
       <window_info anchor="bottom" id="ANTLR Preview" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.28551137" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32739726" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32739726" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="right" x="100" y="100" width="1080" height="600" id="Documentation" order="0" type="FLOATING" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.17124394" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32956383" />
       <window_info anchor="right" id="Designer" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="PsiViewer" order="7" weight="0.32956383" />
@@ -1001,27 +940,10 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/samples/Test.cup" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/platform-api/src/com/intellij/openapi/options/Configurable.java" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/ide/util/PropertiesComponent.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/swing/JCheckBox.java" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/platform-impl/src/com/intellij/ui/StateRestoringCheckBox.java" />
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.form" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/platform-api/src/com/intellij/openapi/options/UnnamedConfigurable.java" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/projectModel-api/src/com/intellij/openapi/components/Storage.java" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/core-api/src/com/intellij/openapi/components/ServiceManager.java" />
-    <entry file="file:///Applications/Intellij Source/idea/platform/util/src/com/intellij/openapi/Disposable.java" />
     <entry file="file:///Applications/Intellij Source/idea/platform/lang-api/src/com/intellij/openapi/roots/ui/configuration/ModuleConfigurationEditorProvider.java" />
     <entry file="file:///Applications/Intellij Source/idea/java/idea-ui/src/com/intellij/openapi/roots/ui/configuration/DefaultModuleEditorsProvider.java" />
     <entry file="file:///Applications/Intellij Source/idea/platform/projectModel-api/src/com/intellij/openapi/components/StoragePathMacros.java" />
     <entry file="file:///Applications/Intellij Source/idea/platform/platform-impl/src/com/intellij/openapi/components/ServiceDescriptor.java" />
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupJavaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/editor/CupJavaInjector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1034,26 +956,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/icons/pinkCup16.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.cup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tirke/cupPlugin/CupParsingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1097,23 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="440">
-            <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupTokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/tirke/cupPlugin/parser/CupParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1121,72 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileTypeFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupNamedElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupElementType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/openapi/components/Storage.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-37">
           <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="e#15#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1201,9 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,13 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CupCompletionContributor#0;class#CupCompletionContributor#0" />
-            <element signature="e#1073#1651#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="method#suggestKeywords#0;class#CupCompletionContributor#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1256,23 +1069,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idea-flex.skeleton">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/META-INF/PlatformExtensionPoints.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1241" />
+        <state relative-caret-position="49">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java">
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettingsForm.form">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createComponent#0;class#CupConfigurable#0" />
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1283,18 +1093,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupSettings.java">
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/options/CupConfigurable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="57" />
+        <state relative-caret-position="64">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupLexerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupJavaImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupNamedElementImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileTypeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/CupFileType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/Cup.bnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1855">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupTokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupNamedElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupElementType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupPsiElementFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tirke/cupPlugin/psi/CupFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cup support.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="140">
+            <caret line="7" column="17" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idea-flex.skeleton">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testData/ParsingTestData.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tirke/cupPlugin/CupParsingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
           </folding>
         </state>
       </provider>

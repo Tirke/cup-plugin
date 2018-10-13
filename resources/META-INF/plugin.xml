@@ -1,17 +1,31 @@
 <idea-plugin>
-    <id>tirke.cupPlugin</id>
-    <name>Cup Support</name>
-    <version>1.0</version>
-    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">Schersach Thomas</vendor>
+  <id>tirke.cupPlugin</id>
+  <name>Cup Support</name>
+  <version>1.2</version>
+  <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">Schersach Thomas</vendor>
 
-    <description><![CDATA[
+  <description><![CDATA[
       Java CUP file support
     ]]></description>
 
-    <change-notes>
-        <![CDATA[
+  <change-notes>
+    <![CDATA[
 
     <hr>
+
+    <div>
+        <b>1.2</b>
+        <ul>
+            <li>Fixed storage and build</li>
+        </ul>
+    </div>
+
+    <div>
+        <b>1.1</b>
+        <ul>
+            <li>Quick fixes for diamond types</li>
+        </ul>
+    </div>
 
     <div>
         <b>1.0</b>
@@ -63,54 +77,54 @@
     </div>
 
     ]]>
-    </change-notes>
+  </change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="141.0"/>
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
 
-    <extensions defaultExtensionNs="com.intellij">
-        <fileTypeFactory
-                implementation="tirke.cupPlugin.CupFileTypeFactory"/>
-        <lang.parserDefinition
-                language="Cup"
-                implementationClass="tirke.cupPlugin.parser.CupParserDefinition"/>
-        <lang.syntaxHighlighterFactory
-                language="Cup"
-                implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
-        <completion.contributor
-                language="Cup"
-                implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>
-        <lang.findUsagesProvider
-                language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupFindUsagesProvider"/>
-        <lang.braceMatcher
-                language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
-        <lang.commenter
-                language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupCommenter"/>
-        <annotator
-                language="Cup"
-                implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
+  <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory
+      implementation="tirke.cupPlugin.CupFileTypeFactory"/>
+    <lang.parserDefinition
+      language="Cup"
+      implementationClass="tirke.cupPlugin.parser.CupParserDefinition"/>
+    <lang.syntaxHighlighterFactory
+      language="Cup"
+      implementationClass="tirke.cupPlugin.highlighting.CupSyntaxHighlighterFactory"/>
+    <completion.contributor
+      language="Cup"
+      implementationClass="tirke.cupPlugin.completion.CupCompletionContributor"/>
+    <lang.findUsagesProvider
+      language="Cup"
+      implementationClass="tirke.cupPlugin.editor.CupFindUsagesProvider"/>
+    <lang.braceMatcher
+      language="Cup"
+      implementationClass="tirke.cupPlugin.editor.CupBracesMatcher"/>
+    <lang.commenter
+      language="Cup"
+      implementationClass="tirke.cupPlugin.editor.CupCommenter"/>
+    <annotator
+      language="Cup"
+      implementationClass="tirke.cupPlugin.editor.CupAnnotator"/>
 
-        <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
-        <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
-        <applicationConfigurable
-                instance="tirke.cupPlugin.options.CupConfigurable"
-                displayName="Cup" />
-        <applicationService
-                serviceInterface="tirke.cupPlugin.options.CupSettings"
-                serviceImplementation="tirke.cupPlugin.options.CupSettings" />
-    </extensions>
+    <languageInjector implementation="tirke.cupPlugin.editor.CupJavaInjector"/>
+    <colorSettingsPage implementation="tirke.cupPlugin.highlighting.CupColorSettingsPage"/>
+    <applicationConfigurable
+      instance="tirke.cupPlugin.options.CupConfigurable"
+      displayName="Cup"/>
+    <applicationService
+      serviceInterface="tirke.cupPlugin.options.CupSettings"
+      serviceImplementation="tirke.cupPlugin.options.CupSettings"/>
+  </extensions>
 
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
 
 </idea-plugin>
