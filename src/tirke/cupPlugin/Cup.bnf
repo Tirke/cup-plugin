@@ -20,7 +20,7 @@
 
     tokens = [
 
-    //Punctuation
+    // Punctuation
     BAR = "|"
     CCEQ = "::="
     COLON = ":"

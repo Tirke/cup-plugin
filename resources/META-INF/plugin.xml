@@ -1,8 +1,8 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>tirke.cupPlugin</id>
     <name>Cup Support</name>
     <version>1.0</version>
-    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">SCHERSACH Thomas</vendor>
+    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">Schersach Thomas</vendor>
 
     <description><![CDATA[
       Java CUP file support

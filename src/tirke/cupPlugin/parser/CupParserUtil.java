@@ -10,14 +10,10 @@ import org.jetbrains.annotations.NotNull;
  */
 public class CupParserUtil extends GeneratedParserUtilBase {
 
-    @NotNull
-    public static String getName(PsiNameIdentifierOwner o) {
-        return ObjectUtils.assertNotNull(o.getNameIdentifier()).getText();
-    }
-
-
-
-
+  @NotNull
+  public static String getName(PsiNameIdentifierOwner o) {
+    return ObjectUtils.assertNotNull(o.getNameIdentifier()).getText();
+  }
 
 
 }

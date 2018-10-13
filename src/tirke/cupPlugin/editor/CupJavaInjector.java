@@ -14,21 +14,24 @@ import tirke.cupPlugin.psi.impl.CupJavaImpl;
  */
 public class CupJavaInjector implements LanguageInjector {
 
-    public static final String PREFIX = "{:";
-    public static final String SUFFIX = ":}";
-    private CupSettings settings = CupSettings.getInstance();
+  public static final String PREFIX = "{:";
+  public static final String SUFFIX = ":}";
+  private CupSettings settings = CupSettings.getInstance();
 
-    @Override
-    public void getLanguagesToInject(@NotNull PsiLanguageInjectionHost host, @NotNull InjectedLanguagePlaces injectionPlacesRegistrar) {
+  @Override
+  public void getLanguagesToInject(@NotNull PsiLanguageInjectionHost host,
+      @NotNull InjectedLanguagePlaces injectionPlacesRegistrar) {
 
-        if (!(host instanceof CupJavaImpl) || !(settings.ENABLE_JAVA_INJECTION)) {
-            return;
-        }
-        final CupJavaImpl cupJavaCode = (CupJavaImpl) host;
-        final String text = cupJavaCode.getText();
-        if (!(text.startsWith(PREFIX) && text.endsWith(SUFFIX))) {
-            return;
-        }
-        injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE, new TextRange(SUFFIX.length(), text.length() - SUFFIX.length()), "public class Dummy { public void dummyMethod(){", "}}");
+    if (!(host instanceof CupJavaImpl) || !(settings.ENABLE_JAVA_INJECTION)) {
+      return;
     }
+    final CupJavaImpl cupJavaCode = (CupJavaImpl) host;
+    final String text = cupJavaCode.getText();
+    if (!(text.startsWith(PREFIX) && text.endsWith(SUFFIX))) {
+      return;
+    }
+    injectionPlacesRegistrar.addPlace(JavaLanguage.INSTANCE,
+        new TextRange(SUFFIX.length(), text.length() - SUFFIX.length()),
+        "public class Dummy { public void dummyMethod(){", "}}");
+  }
 }

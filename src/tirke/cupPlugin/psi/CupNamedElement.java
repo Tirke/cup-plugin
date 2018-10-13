@@ -8,10 +8,11 @@ import org.jetbrains.annotations.NotNull;
  * Created by Tirke on 22/02/2016
  */
 public interface CupNamedElement extends PsiNameIdentifierOwner {
-    @NotNull
-    @Override
-    String getName();
 
-    @NotNull
-    PsiElement getIdentifier();
+  @NotNull
+  @Override
+  String getName();
+
+  @NotNull
+  PsiElement getIdentifier();
 }

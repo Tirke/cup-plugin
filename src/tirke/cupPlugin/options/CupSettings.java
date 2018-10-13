@@ -1,6 +1,9 @@
 package tirke.cupPlugin.options;
 
-import com.intellij.openapi.components.*;
+import com.intellij.openapi.components.PersistentStateComponent;
+import com.intellij.openapi.components.ServiceManager;
+import com.intellij.openapi.components.State;
+import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.Nullable;
 
@@ -9,32 +12,27 @@ import org.jetbrains.annotations.Nullable;
  */
 
 @State(
-        name = "CupSettings",
-        storages = {
-                @Storage(id = "cup", file = StoragePathMacros.APP_CONFIG + "/cup.xml")
-        }
+    name = "CupSettings",
+    storages = {
+        @Storage("cup.xml")
+    }
 )
 public class CupSettings implements PersistentStateComponent<CupSettings> {
 
+  public boolean ENABLE_JAVA_INJECTION = true;
 
-    //TODO remember to update @State for IDEA16
+  public static CupSettings getInstance() {
+    return ServiceManager.getService(CupSettings.class);
+  }
 
+  @Nullable
+  @Override
+  public CupSettings getState() {
+    return this;
+  }
 
-    public boolean ENABLE_JAVA_INJECTION = true;
-
-
-    @Nullable
-    @Override
-    public CupSettings getState() {
-        return this;
-    }
-
-    @Override
-    public void loadState(CupSettings state) {
-        XmlSerializerUtil.copyBean(state, this);
-    }
-
-    public static CupSettings getInstance() {
-        return ServiceManager.getService(CupSettings.class);
-    }
+  @Override
+  public void loadState(CupSettings state) {
+    XmlSerializerUtil.copyBean(state, this);
+  }
 }

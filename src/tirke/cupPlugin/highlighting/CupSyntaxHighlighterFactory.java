@@ -13,9 +13,10 @@ import org.jetbrains.annotations.Nullable;
 public class CupSyntaxHighlighterFactory extends SyntaxHighlighterFactory {
 
 
-    @NotNull
-    @Override
-    public SyntaxHighlighter getSyntaxHighlighter(@Nullable Project project, @Nullable VirtualFile virtualFile) {
-        return new CupSyntaxHighlighter();
-    }
+  @NotNull
+  @Override
+  public SyntaxHighlighter getSyntaxHighlighter(@Nullable Project project,
+      @Nullable VirtualFile virtualFile) {
+    return new CupSyntaxHighlighter();
+  }
 }

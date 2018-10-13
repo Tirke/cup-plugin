@@ -10,9 +10,7 @@ import tirke.cupPlugin.CupLanguage;
  */
 public class CupTokenType extends IElementType {
 
-    public CupTokenType(@NotNull @NonNls String debugName) {
-        super(debugName, CupLanguage.INSTANCE);
-    }
-
-
+  public CupTokenType(@NotNull @NonNls String debugName) {
+    super(debugName, CupLanguage.INSTANCE);
+  }
 }

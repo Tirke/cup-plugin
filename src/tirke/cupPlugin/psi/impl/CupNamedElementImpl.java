@@ -13,26 +13,26 @@ import tirke.cupPlugin.psi.CupNamedElement;
  */
 public abstract class CupNamedElementImpl extends ASTWrapperPsiElement implements CupNamedElement {
 
-    public CupNamedElementImpl(@NotNull ASTNode node) {
-        super(node);
-    }
+  public CupNamedElementImpl(@NotNull ASTNode node) {
+    super(node);
+  }
 
-    @Override
-    @NotNull
-    public String getName() {
-        return CupPsiImplUtil.getName(this);
-    }
+  @Override
+  @NotNull
+  public String getName() {
+    return CupPsiImplUtil.getName(this);
+  }
 
-    @NotNull
-    @Override
-    public PsiElement getNameIdentifier() {
-        return CupPsiImplUtil.getNameIdentifier(this);
-    }
+  @NotNull
+  @Override
+  public PsiElement getNameIdentifier() {
+    return CupPsiImplUtil.getNameIdentifier(this);
+  }
 
-    @NotNull
-    @Override
-    public PsiElement setName(@NonNls @NotNull String name) throws IncorrectOperationException {
-        return CupPsiImplUtil.setName(this,name);
-    }
+  @NotNull
+  @Override
+  public PsiElement setName(@NonNls @NotNull String name) throws IncorrectOperationException {
+    return CupPsiImplUtil.setName(this, name);
+  }
 
 }

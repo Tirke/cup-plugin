@@ -7,9 +7,9 @@ import com.intellij.lang.Language;
  */
 public class CupLanguage extends Language {
 
-    public static final CupLanguage INSTANCE = new CupLanguage();
+  public static final CupLanguage INSTANCE = new CupLanguage();
 
-    private CupLanguage() {
-        super("Cup");
-    }
+  private CupLanguage() {
+    super("Cup");
+  }
 }

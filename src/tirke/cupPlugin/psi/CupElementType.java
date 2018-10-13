@@ -9,7 +9,8 @@ import tirke.cupPlugin.CupLanguage;
  * Created by Tirke on 14/02/2016
  */
 public class CupElementType extends IElementType {
-    public CupElementType(@NotNull @NonNls String debugName) {
-        super(debugName, CupLanguage.INSTANCE);
-    }
+
+  public CupElementType(@NotNull @NonNls String debugName) {
+    super(debugName, CupLanguage.INSTANCE);
+  }
 }
