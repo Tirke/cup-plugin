@@ -17,7 +17,7 @@ Cup file support plugin for IntelliJ IDEA
 0. Make sure you have Grammar-Kit and PsiViewer plugins installed.
 0. Delete the content of `gen` directory if you have previously generated parser code from another version of the BNF file.
 0. Open `src/tirke/cupPlugin/Cup.bnf` file and generate the parser code 
-0. Open `src/tirke/cupPlugin/Cup.flex` file and generate lexer code 
+0. Open `src/tirke/cupPlugin/parser/CupLexer.flex` file and generate lexer code 
 0. The plugin should be ready to run now.
 
 ## License: MIT

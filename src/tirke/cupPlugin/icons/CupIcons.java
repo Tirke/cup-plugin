@@ -8,5 +8,5 @@ import javax.swing.Icon;
  */
 public class CupIcons {
 
-  public static final Icon FILE = IconLoader.getIcon("/tirke/cupPlugin/icons/blueCup16.png");
+  public static final Icon FILE = IconLoader.findIcon("/tirke/cupPlugin/icons/blueCup16.png");
 }
