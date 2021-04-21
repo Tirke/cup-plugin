@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178f1003-626b-4a39-9b0f-cae3a61542b0" name="Default" comment="Plugin.xml update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cup support.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cup support.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/icons/CupIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/icons/CupIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/CupFileTypeFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/parser/CupParserDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tirke/cupPlugin/psi/impl/CupPsiImplUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -675,6 +672,7 @@
       <workItem from="1618921907799" duration="75000" />
       <workItem from="1618922922127" duration="3775000" />
       <workItem from="1618943018638" duration="1416000" />
+      <workItem from="1618963300078" duration="1354000" />
     </task>
     <task id="LOCAL-00001" summary="Updated README">
       <created>1455889801061</created>
@@ -813,6 +811,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">

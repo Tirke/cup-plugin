@@ -25,61 +25,64 @@ import tirke.cupPlugin.psi.CupTypes;
  */
 public class CupParserDefinition implements ParserDefinition {
 
-  public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
-  public static final TokenSet COMMENTS = TokenSet.create(LINE_COMMENT, BLOCK_COMMENT);
+    public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
+    public static final TokenSet COMMENTS = TokenSet.create(LINE_COMMENT, BLOCK_COMMENT);
 
-  public static final IFileElementType FILE = new IFileElementType(
-      Language.<CupLanguage>findInstance(CupLanguage.class));
+    public static final IFileElementType FILE = new IFileElementType(
+            Language.findInstance(CupLanguage.class));
 
 
-  @NotNull
-  @Override
-  public Lexer createLexer(Project project) {
-    return new CupLexerAdapter();
-  }
+    @NotNull
+    @Override
+    public Lexer createLexer(Project project) {
+        return new CupLexerAdapter();
+    }
 
-  @NotNull
-  @Override
-  public TokenSet getWhitespaceTokens() {
-    return WHITE_SPACES;
-  }
+    @NotNull
+    @Override
+    public TokenSet getWhitespaceTokens() {
+        return WHITE_SPACES;
+    }
 
-  @NotNull
-  @Override
-  public TokenSet getCommentTokens() {
-    return COMMENTS;
-  }
+    @NotNull
+    @Override
+    public TokenSet getCommentTokens() {
+        return COMMENTS;
+    }
 
-  @NotNull
-  @Override
-  public TokenSet getStringLiteralElements() {
-    return TokenSet.EMPTY;
-  }
+    @NotNull
+    @Override
+    public TokenSet getStringLiteralElements() {
+        return TokenSet.EMPTY;
+    }
 
-  @Override
-  public PsiParser createParser(Project project) {
-    return new CupParser();
-  }
+    @NotNull
+    @Override
+    public PsiParser createParser(Project project) {
+        return new CupParser();
+    }
 
-  @Override
-  public IFileElementType getFileNodeType() {
-    return FILE;
-  }
+    @NotNull
+    @Override
+    public IFileElementType getFileNodeType() {
+        return FILE;
+    }
 
-  @Override
-  public PsiFile createFile(FileViewProvider viewProvider) {
-    return new CupFile(viewProvider);
-  }
+    @NotNull
+    @Override
+    public PsiFile createFile(@NotNull FileViewProvider viewProvider) {
+        return new CupFile(viewProvider);
+    }
 
-  @Override
-  public SpaceRequirements spaceExistanceTypeBetweenTokens(ASTNode left, ASTNode right) {
-    return SpaceRequirements.MAY;
-  }
+    @NotNull
+    @Override
+    public SpaceRequirements spaceExistenceTypeBetweenTokens(ASTNode left, ASTNode right) {
+        return SpaceRequirements.MAY;
+    }
 
-  @NotNull
-  @Override
-  public PsiElement createElement(ASTNode node) {
-    return CupTypes.Factory.createElement(node);
-  }
-
+    @NotNull
+    @Override
+    public PsiElement createElement(ASTNode node) {
+        return CupTypes.Factory.createElement(node);
+    }
 }
