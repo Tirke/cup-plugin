@@ -14,3 +14,9 @@
 ### Fixed
 
 ### Security
+
+## 1.4.0
+
+### Fixed
+
+- Plugin is now compatible with recent Intellij versions

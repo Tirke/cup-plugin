@@ -1,0 +1,8 @@
+name: Release
+on:
+  release:
+    types: [ prereleased, released ]
+jobs:
+  doNothing:
+    name: Do nothing
+    runs-on: ubuntu-latest

@@ -1,0 +1,21 @@
+# GitHub Actions Workflow created for testing and preparing the plugin release in following steps:
+# - validate Gradle Wrapper,
+# - run test and verifyPlugin tasks,
+# - run buildPlugin task and prepare artifact for the further tests,
+# - run IntelliJ Plugin Verifier,
+# - create a draft release.
+#
+# Workflow is triggered on push and pull_request events.
+
+name: Build
+on: [ push, pull_request ]
+jobs:
+  gradleValidation:
+    name: Gradle wrapper verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch sources
+        uses: actions/checkout@v2.3.4
+
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1.0.3
