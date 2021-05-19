@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>tirke.cupPlugin</id>
+    <name>Cup Support</name>
+    <vendor email="tschersach@gmail.com" url="https://github.com/Tirke">Schersach Thomas</vendor>
+
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Cup"
+                  language="Cup"
+                  extensions="cup"
+                  implementationClass="com.github.tirke.cup.lang.psi.CupFileType"
+                  fieldName="INSTANCE"
+        />
+    </extensions>
+</idea-plugin>

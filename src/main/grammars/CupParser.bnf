@@ -1,0 +1,128 @@
+{
+    generate=[names="long"]
+
+    parserClass = "tirke.cupPlugin.parser.CupParser"
+    parserUtilClass="tirke.cupPlugin.parser.CupParserUtil"
+    extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+    psiClassPrefix = "Cup"
+    psiImplClassSuffix = "Impl"
+    psiPackage = "tirke.cupPlugin.psi"
+    psiImplPackage = "tirke.cupPlugin.psi.impl"
+    psiImplUtilClass = "tirke.cupPlugin.psi.impl.CupPsiImplUtil"
+
+
+    elementTypeHolderClass = "tirke.cupPlugin.psi.CupTypes"
+    elementTypeClass = "tirke.cupPlugin.psi.CupElementType"
+    tokenTypeClass = "tirke.cupPlugin.psi.CupTokenType"
+
+    tokens = [
+
+    // Punctuation
+    BAR = "|"
+    CCEQ = "::="
+    COLON = ":"
+    COMMA = ","
+    LEFTI = "<"
+    RIGHTI = ">"
+    LEFTCUPBRACES = "{:"
+    RIGHTCUPBRACES = ":}"
+    DOT = "."
+    QM = "?"
+    SEMI = ";"
+    STAR = "*"
+
+    // Java keywords
+    CLASS = "class"
+    EXTENDS = "extends"
+    IMPORT = "import"
+    PACKAGE = "package"
+    STATIC = "static"
+    SUPER = "super"
+
+    // Cup keywords
+    ACTION = "action"
+    CODE = "code"
+    INIT = "init"
+    PARSER = "parser"
+    SCAN = "scan"
+    START = "start"
+    WITH = "with"
+
+    // Cup symbols keywords
+    NON = "non"
+    NONTERMINAL = "nonterminal"
+    TERMINAL = "terminal"
+
+    // Cup precedence keywords
+    LEFT = "left"
+    NONASSOC = "nonassoc"
+    PERCENT_PREC = "%prec"
+    PRECED = "precedence"
+    RIGHT = "right"
+
+    // Regex
+    identifier = "regexp:\w+"
+    line_comment='regexp://.*'
+    block_comment='regexp:/\*((?<!\*/)(.|\n))*'
+    space='regexp:\s+'
+
+    ]
+
+    pin(".*Code")=1
+    pin(".*Declaration")=1
+
+}
+
+
+cupSpec                 ::=  initialDeclaration codeParts* symbols* precedences* startWith? production*
+
+initialDeclaration      ::= packageDeclaration? importDeclaration* classNameDeclaration?
+packageDeclaration      ::= 'package' qualifiedName ';'
+importDeclaration       ::= 'import' 'static'? qualifiedName ('.' '*')? ';'
+classNameDeclaration    ::= 'class' identifier ';'
+
+codeParts               ::= actionCode | parserCode | initCode | scanCode
+actionCode              ::= 'action' 'code' java_code ';'?
+parserCode              ::= 'parser' 'code' java_code ';'?
+initCode                ::= 'init' 'with' java_code ';'?
+scanCode                ::= 'scan' 'with' java_code ';'?
+
+
+symbols                 ::= ( 'terminal' | 'non' 'terminal' | 'nonterminal' )
+                            ( typeId symbolDefinition (',' symbolDefinition)*
+                            | symbolDefinition (',' symbolDefinition)* )  ';' {pin = 1}
+
+//private symbols_recover   ::= !('terminal' | 'non' | 'nonterminal')
+
+/* Quick hack for diamonds type */
+typeId                  ::= qualifiedName typeArguments?
+typeArguments           ::= '<' typeArgument? (',' typeArgument)* '>'
+typeArgument            ::=  qualifiedName
+                        |    '?' (('extends' | 'super') qualifiedName)?
+
+symbolDefinition        ::= identifier {implements = "tirke.cupPlugin.psi.CupNamedElement"
+                                       extends = "tirke.cupPlugin.psi.impl.CupNamedElementImpl"}
+
+
+
+
+precedences             ::= 'precedence' ('left' | 'right' | 'nonassoc') termNameList {pin = 1}
+
+startWith               ::= 'start' 'with' identifier ';' {pin = 1}
+
+
+production              ::= symbol_id '::=' rhs ('|' rhs)* ';' {pin = 1}
+rhs                     ::= prod_part* ['%prec' symbol_id]
+prod_part               ::= symbol_id (':' label_id)?
+                        |   java_code
+
+symbol_id               ::= identifier { methods = [getReference] }
+label_id                ::= identifier
+
+
+java_code               ::= '{:' JAVA* ':}' {implements= "com.intellij.psi.PsiLanguageInjectionHost"
+                                             mixin = "tirke.cupPlugin.psi.impl.CupJavaImpl"}
+
+termNameList            ::= identifier (',' identifier)* ';'
+qualifiedName           ::= identifier ('.' identifier)*
