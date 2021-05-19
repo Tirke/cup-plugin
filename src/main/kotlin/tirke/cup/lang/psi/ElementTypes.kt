@@ -1,7 +1,7 @@
-package com.github.tirke.cup.lang.psi
+package tirke.cup.lang.psi
 
-import com.github.tirke.cup.ide.icons.CupIcons
-import com.github.tirke.cup.lang.CupLanguage
+import tirke.cup.ide.icons.CupIcons
+import tirke.cup.lang.CupLanguage
 import com.intellij.openapi.fileTypes.LanguageFileType
 import javax.swing.Icon
 

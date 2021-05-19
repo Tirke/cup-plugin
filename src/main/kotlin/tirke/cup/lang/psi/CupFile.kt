@@ -1,6 +1,6 @@
-package com.github.tirke.cup.lang.psi
+package tirke.cup.lang.psi
 
-import com.github.tirke.cup.lang.CupLanguage
+import tirke.cup.lang.CupLanguage
 import com.intellij.extapi.psi.PsiFileBase
 import com.intellij.openapi.fileTypes.FileType
 import com.intellij.psi.FileViewProvider

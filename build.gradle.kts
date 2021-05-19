@@ -24,7 +24,10 @@ intellij {
     type = properties("platformType")
     downloadSources = true
     updateSinceUntilBuild = true
+}
 
+changelog {
+    version = properties("pluginVersion")
 }
 
 

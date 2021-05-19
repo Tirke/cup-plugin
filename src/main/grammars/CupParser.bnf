@@ -1,20 +1,20 @@
 {
     generate=[names="long"]
 
-    parserClass = "tirke.cupPlugin.parser.CupParser"
-    parserUtilClass="tirke.cupPlugin.parser.CupParserUtil"
+    parserClass = "tirke.cup.lang.parser.CupParser"
+    parserUtilClass="tirke.cup.lang.parser.CupParserUtil"
     extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
 
     psiClassPrefix = "Cup"
     psiImplClassSuffix = "Impl"
-    psiPackage = "tirke.cupPlugin.psi"
-    psiImplPackage = "tirke.cupPlugin.psi.impl"
-    psiImplUtilClass = "tirke.cupPlugin.psi.impl.CupPsiImplUtil"
+    psiPackage = "tirke.cup.lang.psi"
+    psiImplPackage = "tirke.cup.lang.psi.impl"
+    psiImplUtilClass = "tirke.cup.lang.psi.impl.CupPsiImplUtil"
 
 
-    elementTypeHolderClass = "tirke.cupPlugin.psi.CupTypes"
-    elementTypeClass = "tirke.cupPlugin.psi.CupElementType"
-    tokenTypeClass = "tirke.cupPlugin.psi.CupTokenType"
+    elementTypeHolderClass = "tirke.cup.lang.psi.CupTypes"
+    elementTypeClass = "tirke.cup.lang.psi.CupElementType"
+    tokenTypeClass = "tirke.cup.lang.psi.CupTokenType"
 
     tokens = [
 
@@ -101,8 +101,8 @@ typeArguments           ::= '<' typeArgument? (',' typeArgument)* '>'
 typeArgument            ::=  qualifiedName
                         |    '?' (('extends' | 'super') qualifiedName)?
 
-symbolDefinition        ::= identifier {implements = "tirke.cupPlugin.psi.CupNamedElement"
-                                       extends = "tirke.cupPlugin.psi.impl.CupNamedElementImpl"}
+symbolDefinition        ::= identifier {implements = "tirke.cup.lang.psi.CupNamedElement"
+                                       extends = "tirke.cup.lang.psi.impl.CupNamedElementImpl"}
 
 
 
@@ -122,7 +122,7 @@ label_id                ::= identifier
 
 
 java_code               ::= '{:' JAVA* ':}' {implements= "com.intellij.psi.PsiLanguageInjectionHost"
-                                             mixin = "tirke.cupPlugin.psi.impl.CupJavaImpl"}
+                                             mixin = "tirke.cup.lang.psi.impl.CupJavaImpl"}
 
 termNameList            ::= identifier (',' identifier)* ';'
 qualifiedName           ::= identifier ('.' identifier)*

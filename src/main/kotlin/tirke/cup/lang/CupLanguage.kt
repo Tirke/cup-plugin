@@ -1,4 +1,4 @@
-package com.github.tirke.cup.lang
+package tirke.cup.lang
 
 import com.intellij.lang.Language
 

@@ -11,7 +11,7 @@
         <fileType name="Cup"
                   language="Cup"
                   extensions="cup"
-                  implementationClass="com.github.tirke.cup.lang.psi.CupFileType"
+                  implementationClass="tirke.cup.lang.psi.CupFileType"
                   fieldName="INSTANCE"
         />
     </extensions>

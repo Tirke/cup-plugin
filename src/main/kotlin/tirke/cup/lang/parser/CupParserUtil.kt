@@ -1,4 +1,4 @@
-package com.github.tirke.cup.lang.parser
+package tirke.cup.lang.parser
 
 import com.intellij.lang.parser.GeneratedParserUtilBase
 
