@@ -24,6 +24,8 @@ intellij {
     type = properties("platformType")
     downloadSources = true
     updateSinceUntilBuild = true
+
+    setPlugins("com.intellij.java")
 }
 
 changelog {
@@ -33,6 +35,9 @@ changelog {
 
 tasks {
     patchPluginXml {
+        version(properties("pluginVersion"))
+        sinceBuild(properties("pluginSinceBuild"))
+
         pluginDescription(
                 closure {
                     File(projectDir, "README.md").readText().lines().run {
@@ -46,5 +51,15 @@ tasks {
                     }.joinToString("\n").run { markdownToHTML(this) }
                 }
         )
+
+        changeNotes(
+                closure {
+                    changelog.getLatest().toHTML()
+                }
+        )
+    }
+
+    runPluginVerifier {
+
     }
 }
