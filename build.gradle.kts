@@ -1,3 +1,4 @@
+import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 
 fun properties(key: String) = project.findProperty(key).toString()
@@ -30,15 +31,17 @@ intellij {
 tasks {
     patchPluginXml {
         pluginDescription(
-                File(projectDir, "README.md").readText().lines().run {
-                    val start = "<!-- Plugin description -->"
-                    val end = "<!-- Plugin description end -->"
+                closure {
+                    File(projectDir, "README.md").readText().lines().run {
+                        val start = "<!-- Plugin description -->"
+                        val end = "<!-- Plugin description end -->"
 
-                    if (!containsAll(listOf(start, end))) {
-                        throw GradleException("Missing plugin description section in README")
-                    }
-                    subList(indexOf(start) + 1, indexOf(end))
-                }.joinToString("\n").run { markdownToHTML(this) }
+                        if (!containsAll(listOf(start, end))) {
+                            throw GradleException("Missing plugin description section in README")
+                        }
+                        subList(indexOf(start) + 1, indexOf(end))
+                    }.joinToString("\n").run { markdownToHTML(this) }
+                }
         )
     }
 }
