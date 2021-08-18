@@ -1,5 +1,7 @@
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 
 fun properties(key: String) = project.findProperty(key).toString()
 
@@ -34,6 +36,15 @@ changelog {
 
 
 tasks {
+    withType<JavaCompile> {
+        sourceCompatibility = "11"
+        targetCompatibility = "11"
+    }
+
+    withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = "11"
+    }
+
     patchPluginXml {
         version(properties("pluginVersion"))
         sinceBuild(properties("pluginSinceBuild"))
@@ -60,6 +71,6 @@ tasks {
     }
 
     runPluginVerifier {
-
+        ideVersions(properties("pluginVerifierIdeVersions"))
     }
 }

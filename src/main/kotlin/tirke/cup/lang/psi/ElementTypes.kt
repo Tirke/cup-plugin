@@ -6,7 +6,7 @@ import com.intellij.openapi.fileTypes.LanguageFileType
 import javax.swing.Icon
 
 object CupFileType : LanguageFileType(CupLanguage) {
-    override fun getName(): String = "Cup File"
+    override fun getName(): String = "Cup"
 
     override fun getDescription(): String = "Cup parser file"
 
